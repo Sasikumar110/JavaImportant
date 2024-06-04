@@ -1,0 +1,251 @@
+Java 8 Features
+ 
+1)  Lambda expression
+	It provides a clear way to represent one method interface using an expression. It is very useful in collection library. 
+    It helps to iterate, filter and extract data from collection.
+	Lambda expression provides implementation of functional interface. An interface which has only one abstract method is called functional interface. 
+	Java provides an anotation @FunctionalInterface, 
+	which is used to declare an interface as functional interface.
+	Syntax - (argument-list) -> {body}  
+
+	interface Drawable {
+		public void draw();
+	}
+
+	interface ParametersAdd {
+
+		public int add(int a, int b);
+	}
+
+	class Product {
+		int id;
+		String name;
+		double value;
+
+		public Product(int id, String name, double value) {
+			super();
+			this.id = id;
+			this.name = name;
+			this.value = value;
+		}
+	}
+
+	public class NewFeatures {
+
+		public static void main(String[] args) {
+
+			Drawable d = new Drawable() {
+				public void draw() {
+					System.out.println("draw method");
+				}
+			};
+			d.draw();
+
+			int width = 10;
+			Drawable d1 = () -> {
+				int t1 = 5;
+				t1 = t1 + width;
+				System.out.println("Drawing " + t1);
+			};
+			d1.draw();
+
+			ParametersAdd p1 = (a, b) -> {
+				int c = a + b;
+				System.out.println("In Lambda Expression " + c);
+				return c;
+			};
+			int c = p1.add(5, 555);
+			System.out.println("return value, " + c);
+
+			ParametersAdd p2 = (int a, int b) -> {
+				return a + b;
+			};
+			System.out.println(p2.add(10, 10));
+
+			List<String> list = new ArrayList<>();
+			list.add("ankit");
+			list.add("mayank");
+
+			list.forEach((a) -> {
+			System.out.println(a);
+			});
+
+			List<Product> plist = new ArrayList<>();
+			plist.add(new Product(1, "anbu", 103.4));
+			plist.add(new Product(2, "senthil", 230.4));
+			plist.add(new Product(3, "guna", 50.4));
+
+			Collections.sort(plist, (p11, p22) -> {
+				return p11.name.compareTo(p22.name);
+			});
+
+			plist.forEach((n) -> {
+				System.out.println(n.id + " " + n.name + " " + n.value);
+			});
+
+			Stream<Product> filtered_data = plist.stream().filter(p -> p.value > 60);
+
+			filtered_data.forEach((n) -> {
+				System.out.println(n.id + " " + n.name + " " + n.value);
+			});
+
+		}
+	}
+
+2) Method reference is used to refer method of functional interface. It is compact and easy form of lambda expression.
+	Method references are a special type of lambda expressions. They're often used to create simple lambda expressions by referencing existing methods.
+	Types of Method References
+	1) Reference to a static method. 2)Reference to an instance method. 3)Reference to a constructor.
+	
+	interface Sayable {
+		public void say();
+	}
+
+	public class MethodRef {
+
+	public static void saySomething() {
+			System.out.println("test say");
+		}
+
+		public void saySecond() {
+			System.out.println("test say");
+		}
+
+		public static void main(String[] args) {
+
+			Sayable sf = MethodRef::saySomething;
+			sf.say();
+
+			MethodRef mth = new MethodRef();
+
+			Sayable sf1 = mth::saySecond;
+			sf1.say();
+
+		}
+	}
+	
+	bikeBrands.stream()
+  .map(Bicycle::new)
+  .toArray(Bicycle[]::new);
+	
+3) An Interface that contains exactly one abstract method is known as functional interface.
+	It can have any number of default, static methods but can contain only one abstract method. 
+	It can contain any number of object class methods like int hashcode(), String toString(), boolean equals();
+	@FunctionalInterface annotation to use the inerface as functional interface
+	A functional interface can extends another interface only when it does not have any abstract method.
+	@FunctionalInterface
+	interface Sayable1 {
+		void say(String msg);
+	}
+
+	public class FunctionalInterExample implements Sayable1 {
+
+		@Override
+		public void say(String msg) {
+			System.out.println(msg);
+		}
+
+		public static void main(String[] args) {
+			FunctionalInterExample f1 = new FunctionalInterExample();
+			f1.say("test");
+		}
+
+	}
+	
+4) Streams predicate: It takes Predicate reference as an argument. Predicate is a functional interface. So, you can also pass lambda expression here.
+	takes an arugment and returns the boolean output.
+It is a functional interface which represents a predicate (boolean-valued function) of one argument. 
+5) Java provides a class Base64 to deal with encryption. You can encrypt and decrypt your data by using provided methods. You need to import java.util.Base64 in
+   your source file to use its methods.
+   This class provides three different encoders and decoders to encrypt information at each level.
+      Base64.Encoder encoder = Base64.getEncoder();  
+	  Base64.Decoder decoder = Base64.getDecoder();  
+6) Java provides a facility to create default methods inside the interface. Methods which are defined inside the interface and tagged with default are known as default methods. 
+   These methods are non-abstract methods.
+   interface Sayable{  
+		// Default method   
+		default void say(){  
+			System.out.println("Hello, this is default method");  
+		}  
+		// Abstract method  
+		void sayMore(String msg);  
+	}  
+7) foreach method  gamesList.forEach(games -> System.out.println(games)); 
+8) Collectors is a final class that extends Object class. It provides reduction operations, such as accumulating elements into collections, 
+   summarizing elements according to various criteria, etc.
+9) StringJoiner - It is used to construct a sequence of characters separated by a delimiter. Now, you can create string by passing delimiters like comma(,),
+   hyphen(-) etc. 
+   You can also pass prefix and suffix to the char sequence.
+   StringJoiner joinNames = new StringJoiner(","); // passing comma(,) as delimiter   
+        joinNames.add("Rahul");  
+        joinNames.add("Raju");  
+	o/p - Rahul,Raju
+10) Optional - It is a public final class and used to deal with NullPointerException in Java application. You must import java.util package to use this class. 
+    It provides methods which are used to check the presence of value for particular variable.
+	 Optional<String> checkNull = Optional.ofNullable(str[5]);  
+        if(checkNull.isPresent()){  // check for value is present or not  
+            String lowercaseString = str[5].toLowerCase();  
+			}
+11) Nashorn is a JavaScript engine. It is used to execute JavaScript code dynamically at JVM (Java Virtual Machine).
+	Java provides a command-line tool jjs which is used to execute JavaScript code.
+12) Java Parallel array sort - Java provides a new additional feature in Array class which is used to sort array elements parallel
+	The parallelSort() is functionally different. Unlike sort(), which sorts data sequentially using a single thread,
+	it uses a parallel sort-merge sorting algorithm. It breaks the array into sub-arrays that are themselves sorted and then merged.
+	For executing parallel tasks it uses the ForkJoin pool.
+
+13) Java Reflection or Method Parameter Reflection - ou can get the names of formal parameters of any method or constructor.
+   The java.lang.reflect package contains all the required classes like Method and Parameter to work with parameter reflection.
+    Classcls = calculate.getClass();  ,  Method[] method = cls.getDeclaredMethods(); method2.getName()
+14) Java Type annotations - annotations can be applied to any type use. It means that annotations can be used anywhere you use a type.
+      For example, if you want to avoid NullPointerException in your code,
+     you can declare a string variable like this:
+	 @NonNull String str; , @NonNull List<String>  , List<@NonNull String> str,   @Encrypted File file  
+	 
+Java 9 Features
+
+1) Interface allows us to declare private methods that help to share common code between non-abstract methods.
+
+	interface Sayable{  
+		default void say() {  
+			saySomething();  
+		}  
+		// Private method inside interface  
+		private void saySomething() {  
+			System.out.println("Hello... I'm private method");  
+		}  
+	}  
+	public class PrivateInterface implements Sayable {  
+		public static void main(String[] args) {  
+			Sayable s = new PrivateInterface();  
+			s.say();  
+		}  
+	} 
+2) Try with resources - that helps to close resource automatically after being used.
+   In other words, we can say that we don't need to close resources (file, connection, network etc) explicitly, try-with-resource close that automatically 
+   by using AutoClosable interface.
+   public static void main(String[] args) throws FileNotFoundException {  
+        FileOutputStream fileStream=new FileOutputStream("javatpoint.txt");  
+        try(fileStream){  
+             String greeting = "Welcome to javaTpoint.";      
+                byte b[] = greeting.getBytes();       
+                fileStream.write(b);      
+                System.out.println("File written");           
+        }catch(Exception e) {  
+            System.out.println(e);  
+        }         
+    }  
+3) Anonymous inner class - allows us to use diamond operator with anonymous classes. Using the diamond with anonymous classes was not allowed in Java 7.
+	abstract class ABCD<T>{  
+		abstract T show(T a, T b);  
+	}  
+	public class TypeInferExample {  
+		public static void main(String[] args) {  
+			ABCD<String> a = new ABCD<String>() { // diamond operator is not empty  
+				String show(String a, String b) {  
+					return a+b;   
+				}  
+			};    
+			String result = a.show("Java","9");  
+			System.out.println(result);  
+		}  
+	}  

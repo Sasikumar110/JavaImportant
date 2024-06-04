@@ -1,0 +1,56 @@
+Design Patterns
+1) Creational Design Patterns 2)Behavioural Design Patterns 3)Structural Patterns 4)j2EE Patterns
+
+1) Creational Desing patterns
+   Related to the way of creationg objects
+   
+   Types:
+   1)Factory Method 2)Abstract Factory 3)Builder 4)Prototype 5)Singleton
+  
+  1)Factory Method:
+    Don't expose the creation loin to client and refer the created object using a standard interface.
+	  1) Create main class which call factory class. 
+	  Class that gives instance based the string passed 
+	  Example : Remote File Transfer topic (sft, ftp, local,sharedrive)
+  2)Abstract Factory Method:
+    1) Create an abstract class and one method to get profession 
+	2) Create a two or more class that extends abstract factory and implement the method that return object based on the string given
+	3) Every class retuns based on the type l
+  3) Singleton
+    create one object that flows through out the application.
+  4) ProtoType design pattern
+    Creating duplicate objects using clone method.
+	Creating a object using new objects that tends to extra memory and 
+  5) Builder Design patterns
+   
+   
+2) Structural Design Patterns
+   Show how to assemble different pieces of a system together in a flexible and extensible fashion
+   When one part changes, the entire structure does not need to change.
+   Types
+   1)Proxy DP 2) Flyweight 3)Facade 4)Composite 5)Adapter 6)Decorator
+   
+   Proxy
+    --> Client - Proxy -- Real Object
+	abstract method - method1  -> implements interface that Interface
+	public class RealAbstractClass implements Subject{
+	@override
+	public void method1{
+		 // real object method
+		}
+	}
+	
+	public class Class1 extends RealAbstractClass{
+	    @override
+		public void method1{
+		// proxy object
+		super.method1()  // class real object
+		
+		}
+	}
+	
+	Advantage - Protection, Caching, Logging
+	
+	2) Flyweight
+	  1) One class that shares the common values and that is shared across various classes for the objects
+	  2) Control memory object

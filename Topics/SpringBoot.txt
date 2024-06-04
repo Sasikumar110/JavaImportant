@@ -1,0 +1,92 @@
+SpringBoot
+1) It avoids writing lots of boilerplate Code, Annotations and XML Configuration.
+2) It is very easy to integrate Spring Boot Application with its Spring Ecosystem like Spring JDBC, Spring ORM, Spring Data, Spring Security etc.
+3) It provides Embedded HTTP servers like Tomcat, Jetty etc. to develop and test our web applications very easily.
+4) To avoid XML Configuration completely
+5) Limitation of Spring Boot - Spring Boot can use dependencies that are not going to be used in the application. These dependencies increase the size of the application.
+6) Spring Version
+7) Types of Layer 1)Presentation Layer 2)Business Layer 3)Persistence Layer 4)Database Layer
+8) Properties files are used to keep ‘N’ number of properties in a single file to run the application in a different environment.
+  In Spring Boot, properties are kept in the application.properties file under the classpath.
+  The application.properties file is located in the src/main/resources directory. 
+9) Spring Boot supports YAML based properties configurations to run the application. Instead of application.properties, we can use application.yml file. 
+   This YAML file also should be kept inside the classpath.
+10) Externalized Properties - Instead of keeping the properties file under classpath, we can keep the properties in different location or path.
+  While running the JAR file, we can specify the properties file path. You can use the following command to specify the location of properties file while 
+  running the JAR −Dspring.config.location = C:\application.properties
+11) The @Value annotation is used to read the environment or application property value in Java code. @Value("${property_key_name}")
+12) 
+
+1) Springboot is a java based spring framework used for rapid application development(to built stand alone microservices). It has extra support fro auto 
+ configuration and embedded servers like tomcat jetty etc..
+2) Features of spring boot - embedded tomcat, minimal configuration, annotation based configuration, no XML Configuration
+3) key Components - spring boot auto-configuration, starter poms, actuators, spring boot CLI
+4) why spring boot over spring - Starter POMs, Version management, Auto - configuration, Component scanning, embedded HTTP servers, Actuators, Inmemory DB
+5) Starter dependencies - data jpa starter, Web starter, Security starter, Email starter, Thymeleaf starter, Test starter
+6) Spring Boot automatically scans all the components included in the project by using @ComponentScan annotation.
+7) @SpringBootApplication equivalent to @Configuration, @EnableAutoConfiguration and @ComponentScan
+8) @ComponentScan - Scans all the beans and package declarations when the application initializes.
+9) Spring boot application must have a main method. This method servers as an entry point, which invokes the SpringApplication#run method to bootstrap the application.
+   @SpringBootApplication 
+	public class MyApplication { 
+	   	public static void main(String[] args) {    
+			SpringApplication.run(MyApplication.class);        
+		   } 
+	}
+10) Spring boot starter is a maven template that contaions collection of transitive dependencies that are needed to start a particular functionality
+    Like Web we need to add spring-boot-starter-web dependency
+11) Spring initializer is a web application that helps you to create an initial spring boot project structure and provides a maven file to build your code.
+12) Spring boot CLI is a command-line interface that allows you to create a spring based java application using Groovy.
+   ex: You don't need to create a getter and setter methods or access modifier, return statement. If u use jdbc template, it automaticallyloads for u.
+   
+13)Spring @Configuration annotation helps in Spring annotation based configuration. @Configuration annotation indicates that a class declares one or more
+ @Bean methods and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime.
+ 
+14)  @ComponentScan annotation along with the @Configuration annotation to specify the packages that we want to be scanned. @ComponentScan without arguments
+ tells Spring to scan the current package and all of its sub-packages.
+
+15) can we disable default web server in spring boot application
+   Yes, we can disable by providing property in application.properties file that
+   spring.main.web-application-type = none
+   (starts the server and stops after completed)
+   We will add another web servers in server folder
+   
+16) Disable specific auto-configuration 
+    @EnableAutoConfiguration(exclude = {Particularclass.Class})
+
+17) @RestController - Combination of @Controller and @ResponseBody 
+    Converts response to the JSON or XML. It indicates that data returned by each method will be written straight into the response body instead of rendering 
+	a template
+	@Controller - Map model object to view or template
+	
+18) Web APplication that response in html css like template
+    Rest API is that response in JSON or XML format
+	
+19) Use of Profiles 
+    Profiles are used to seprate the configuration individually for each env like dev, qa, uat and prod
+	To get which application-dev or application-prod file we need to tell in application properties file using 
+	Spring.profile.active = prod
+   
+20) Actuators  - help you to monitor and manage the application when you push it to production. Features like metric, health detalis, audit
+    Metrics like - how many http hits to server, rest end points exposed to client 
+	/health privides status like server is up or not using url - http://localhost:8080/actuator/health - return { status:"up"} 
+	/beans - beans provided in the application
+	http://localhost:8080/actuator/env -  provides configuration details and environment details
+	/httpTrace - need to create HttpRepositoryBean in application anf after http://localhost:8080/actuator/httptrace - it will show each http request details like 
+	  what type of method and response and all
+	we will change the /actuator requestmapping value in application.properties file using management.endpoints.web.base-path=/manage
+	
+21) Tomcat will run in 8080 server but we will expose in another port by aading management.server.port = 8090
+22) how to deploy spring boot application
+	need to add in pom.xml  - ><packaging>war or jar</packaging>
+	for build we need spring-boot-maven-plugin dependencies
+
+23) why application.yaml file  -> more clarity and readable 
+    2) Hierarichal format 
+	3) suuports for maps, list
+	SPringboot always prefer properties file than yaml file
+	
+24) Create Custom Exceptions
+   @Componenet
+   public class CustomException extends RunTimeException{
+   }

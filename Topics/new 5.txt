@@ -1,0 +1,67 @@
+Aggregation, Composition, Association
+Call method of parent
+equals and hashcode methods
+Points discussed:
+
+1) Scheduler - schedule on weekly or on time basis 				-DONE
+2) Mail trigger on both success and failure events	   - code completed
+3) Split the process using threads                     - completed
+4) Exclude the Temporary tables                        - list
+5) Increase the count of the file based on the rows    - list
+6) Configure in SFTP or Network Path							-done
+7) Exception handling
+
+
+prmiary table, secondary table
+josn ignore
+autowire bean 
+
+Enumerator
+
+profiles -dev 
+spring profiles package profiles
+@conditiononproperty - based profile 
+different - bean  name different means 
+security - authentication config adapter -
+@enablewebsecurity
+authentication and authorization
+aop interceptor
+
+microservice - restemplate and kafka, webflex 
+log - rancher 
+every request unique id pods 
+spring batch reader writer processor
+exception handling - global 
+error - contact your ststem
+redis - performance 
+queries, redis, 
+design patterns - singleton, builder design pattern, factory adapter
+same
+object life cycle
+postconstruct
+annotations
+
+jpa proxy design pattern - hibernate
+jpa queries
+transactin management - rollback, 
+@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, transactionManager = "transactionManager")
+cascade fetch types
+@transient
+@jsonignore, 
+put- full object, patch -single field
+continous memory
+rancher
+max min sum second max 
+
+joins index 130 fields - 80 fields 
+
+
+hystrix - where to use, initimate to frontend fallback
+zulu proxy -> request where to get
+where autherization is handled
+
+docker image - nexus - docer pull - ssh file - image 
+container - virtual envi run appli
+
+
+

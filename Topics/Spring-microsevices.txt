@@ -1,0 +1,49 @@
+@ControllerAdvice is a specialization of the @Component annotation which allows to handle exceptions across the whole application in one global handling
+ component.
+ It can be viewed as an interceptor of exceptions thrown by methods annotated with @RequestMapping and
+ 	@ExceptionHandler({ RuntimeException.class, NullPointerException.class })
+	@ExceptionHandler(Exception.class)
+	@ExceptionHandler(SQLException.class)
+	@ExceptionHandler(MultipartException.class)
+
+Hystrix is a library that controls the interaction between microservices to provide latency and fault tolerance. Additionally, it makes sense to modify the 
+UI to let the user know that something might not have worked as expected or would take more time.
+ 
+Zuul Server is a gateway application that handles all the requests and does the dynamic routing of microservice applications.
+ The Zuul Server is also known as Edge Server.
+For Example, /api/user is mapped to the user service and /api/products is mapped to the product service and
+ Zuul Server dynamically routes the requests to the respective backend application.
+@EnableZuulProxy in gateway microservice
+
+Eureka Server is an application that holds the information about all client-service applications. Every Micro service will register into the Eureka server 
+and Eureka server knows all the client applications running on each port and IP address. Eureka Server is also known as Discovery Server.
+@EnableEurekaServer in gateway application.,
+
+@EurekaClient Every microservice name with @EurekaClient will registered to the gateway eureka server . SO each microservice will annotate with @EurekaClient
+
+The circuit breaker we can define the threshold value for the number of failures between the microservices.
+The proxy will monitor the failue count and stops the request sending for the specific amount of time if the failure count exceeds the threshold limit.
+After the timeout tit again send the limited amount of request to hit if succeed then normal flow continues
+
+Closed State -  Default is the closd state.If the failure request count exceeds the  thresholdvalue in specific time the circuit breaker will move to open state.
+Open state -  Blocks the communication between the microservices and the send microservice will receive an exception from the circuit breaker
+Half open state - circuit breaker will allow limited no of request. if request success then back to close state . if not then it block for certain amount of time.
+
+
+Spring Batch provides reusable functions that are essential in processing large volumes of records, including logging/tracing, 
+transaction management, job processing statistics, job restart, skip, and resource management.
+
+JDBCPagingItemReader
+JDBCPagingItemWriter	
+ItemProcessor
+
+1) JDBC Driver is a software component that enables java application to interact with the database. there are four types of jdbc driver
+   we used - com.mysql.jdbc.Driver
+2)DriverManagerDataSource - Set the JDBC driver class name. This driver will get initialized on startup, registering itself with the JDK's DriverManager. 
+  NOTE: DriverManagerDataSource is primarily intended for accessing pre-registered JDBC drivers. If you need to register a new driver,
+  consider using SimpleDriverDataSource instead.
+
+3) Methods Of Transaction Management or transaction tyoes. #1) setAutoCommit() Method. #2) Commit() Method. #3) Rollback() Method. #4) setSavepoint() Method. #5) releaseSavepoint() Method.
+   setAutoCommit(true); enables auto-commit mode, which means that each statement is once again committed automatically when it is completed
+   The Commit(false) ensures all the successful execution of statement. If any of them not execute, the whole process gets failed.
+   Rollback() method reverse all the changes that is made by current connection.

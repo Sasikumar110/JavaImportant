@@ -1,0 +1,90 @@
+1) What are Structure Programing assembley language
+whare 1
+2) What is Compiling? or Interpreter
+3) what is data Structure?
+4) What is array?
+5) What is Linked List?
+6) What is LIFO and FIFo?
+7) What is Recursion?
+8) What is OOPs Concept?
+static keyword
+access specifiers in java
+12) what is datatype and its types 
+Typecasting in java
+13) break continue
+what is interface
+types of variables
+operators 
+use of abstract keyword
+extends and implements
+what is java collections
+9) what is Linear and Non-Linear data Structure?
+10) what is loops and its  types?
+if statements
+11) what are Constants?
+6. What are finally and finalize in Java?
+18) exception handelling
+throw throws
+checked and unchecked exceptions
+19) what is foreach
+
+14) DML and DDL
+15) foreign key candidate key
+16) joins
+17) what is html and css javascript
+1) RDBMS vs DBMS
+20) java8 features
+
+1)reverse a string?
+
+------------------------***************Angular****************---------------------
+
+Angular component
+Angular selector
+Ngif and ngfor
+Service
+@Injectable
+Two way binding
+Can we create a constructor in angular
+Life Cycle Hooks - Ngonit
+Router links
+Angular material
+Http interceptors
+Pipe
+Directives
+Parent to child @parent
+Child to parent @viewchikd
+Add an object to existing array - Array push
+delete an object from existing array - Array Splice
+Copy array without reference
+How to iterate a array  - ForEach 
+Array Filter - .filter()
+Subscribe 
+use of moment - format date
+p-table
+Routing through selector
+Explain npm
+what is mvm and mvvm
+explain angular structure
+what is use of angular.json
+what is use of tsconfig.json
+whats is module
+whats is use of providers
+how to communicate parent to child and child to parent component
+what is element ref
+what is viewchild
+how to import particular module component to another module
+explain provide service scope
+what is the use of use clase in provider
+what is use of angularcli
+explain rxjs
+explain httpmodule/httpclient
+what is the use of promise and observable
+explain databinding
+what is routing
+what is lazyloading
+explaing component lifecycle
+what is pipe
+what is Directive
+how apply filter in array
+what is aot

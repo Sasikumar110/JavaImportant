@@ -1,0 +1,61 @@
+1) Multithreading is a programming concept in which the application can create a small unit of tasks to execute in parallel.
+2) Java has great support for multithreaded applications. Java supports multithreading through Thread class.
+3) There are two types of threads in an application - user thread and daemon thread. 
+4) We can create Threads by either implementing Runnable interface or by extending Thread Class.
+5) Thread can be called lightweight process. 
+6) The Java Thread.sleep() method can be used to pause the execution of the current thread for a specified time in milliseconds
+7) Java Thread join method can be used to pause the current thread execution until unless the specified thread is dead.
+   three type of joins - public final void join():, public final synchronized void join(long millis), public final synchronized void join(long millis, int nanos)
+8) Thread Life Cycle - New Thread -> Start Thread -> Runnable <-> Running -> Dead
+														↑            ↓ 
+														↑--------Blocked/Waitinng
+9) Blocked/Waiting - A thread can be waiting for other thread to finish using thread join or it can be waiting for some resources to available.	
+10) Once the thread finished executing, it’s state is changed to Dead and it’s considered to be not alive.
+11) Wait - One which waits indefinitely for any other thread to call notify or notifyAll method on the object to wake up the current thread.
+12) notify - wakes up only one thread waiting on the object and that thread starts execution;
+13) notifyall - wakesup all threads waiting on the object and one thread starts execution. that one thread will be selected by thread scheduler.
+14) Note that only one active thread can own an object's monitor at a time.
+15) Synchronized keyword comes into the picture when multiple threads are trying to get access to the same java object simultaneously. 
+	A synchronized block or method allows only one thread at a time to execute on a given object, which will solve the problem of data inconsistency
+16) If you want to control synchronization to a specific object, or you only want part of a method to be synchronized to the object,
+    then specify a synchronized block.
+	If you use the synchronized keyword on the method declaration, it will synchronize the whole method to the object or class.
+	When a method is synchronized, it locks the Object, if method is static it locks the Class, so it’s always best practice to use synchronized block to
+	lock the only sections of method that needs synchronization.
+    You should use the lowest level of locking, for example, if there are multiple synchronized block in a class and one of them is locking the Object,
+	then other synchronized blocks will also be not available for execution by other threads. 
+	When we lock an Object, it acquires a lock on all the fields of the Object
+17) Java synchronized keyword cannot be used for constructors and variables.
+18) Java ThreadLocal is used to create thread local variables. We know that all threads of an Object share it’s variables, so the variable is not thread safe.
+    We can use synchronization for thread safety but if we want to avoid synchronization, we can use ThreadLocal variables.
+19) Java thread dump is very helpful in analyzing bottlenecks in the application and deadlock situations.
+20) Java java.util.Timer is a utility class that can be used to schedule a thread to be executed at certain time in future.
+   Java Timer class can be used to schedule a task to be run one-time or to be run at regular intervals.
+21) Timer class uses java.util.TaskQueue to add tasks at given regular interval and at any time there can be only one thread running the TimerTask,
+ for example if you are creating a Timer to run every 10 seconds but single thread execution takes 20 seconds, then Timer object will keep adding tasks to the queue and as soon as one thread is finished, it will notify the queue and another thread will start executing.
+22) Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe.
+	It can be used as an alternative way of achieving synchronization in Java.
+	You can use the volatile keyword with variables. Using volatile keyword with classes and methods is illegal.
+	It synchronizes the value of one variable at a time between thread memory and main memory.	
+23)Daemon thread in Java is a service provider thread that provides services to the user thread. Its life depend on the mercy of user threads i.e.
+    when all the user threads dies, JVM terminates this thread automatically.
+	There are many java daemon threads running automatically e.g. gc, finalizer etc. It is a low priority thread.
+	TestDaemonThread1 t1=new TestDaemonThread1();/
+	 t1.setDaemon(true);//now t1 is daemon thread  
+	t1.start();//starting threads  
+	if the thread is a daemon thread then u need to start the thread.
+24) Java ThreadLocal is used to create thread local variables. We know that all threads of an Object share it’s variables, so the variable is not thread safe.
+    We can use synchronization for thread safety but if we want to avoid synchronization, we can use ThreadLocal variables.
+	ThreadLocal in Java is another way to achieve thread-safety apart from writing immutable classes.
+	Thread local can be considered as a scope of access like session scope or request scope. In thread local, you can set any object and this object 
+	will be local and global to the specific thread which is accessing this object.
+	Java ThreadLocal class provides thread-local variables. It enables you to create variables that can only be read and write by the same thread. 
+	If two threads are executing the same code and that code has a reference to a ThreadLocal variable then the two threads can't see the local variable of 
+	each other
+	
+
+
+
+
+
+

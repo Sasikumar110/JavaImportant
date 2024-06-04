@@ -1,0 +1,180 @@
+***************Core Java************
+
+Polymorphism 
+Method Overloading
+Method Overloading and Type Promotion
+Method Overriding in java
+Final Keyword
+Interface in Java
+Call by Value and Call by Reference in Java
+Aggregation in Java
+Composition
+Aggregation vs Composition
+How to call a parent method in parent child inheritance IS-a relationship? both child and parent has same method
+how to make a class signleton in java ?
+
+Java String
+Immutable String in Java
+How to make a class Immutable in java ?
+equals() and Hascode() in Object class. what is the use of it ?
+Java String intern()
+String basic logic programs like --- reverse the string, count the duplicates, count the duplicate words in a sentence.
+ 
+Exception Handling in Java
+try catch block
+finally block use
+finally vs finalize
+throw vs throws
+Java Exception propagation
+what happens when there is a exception in the catch block itself?
+
+Multithreading in Java
+life cycle of thread
+How to create a thread?
+wait() vs sleep() 
+notify()
+Join()
+runnable vs callable
+garbage collection
+deamon thread
+
+Synchronization in Java
+Deadlock
+
+what is Java reflection ?
+
+Collections in Java
+ArralyList vs LinkedList
+HashMap vs Hashtable
+hashmap vs concurrentHashMap
+what happens when same key is inserted in map ?
+Comparable vs Comparator
+Set concepts
+what happens when 2 employee objects having same datas added to a set will set have size of 2 or 1 reason ?
+
+Serialization
+Externalization
+volatile keyword
+transient keyword
+native keyword
+
+fileinputstream vs filereader
+
+Case based questions:
+what happens when a 1 million of data is fetched from database and stored in a list in our code will it throw a heap memory error and how to solve this logic ?
+Programs like duplicate elements print from a int array without using any collections?
+
+
+
+****************SQL*************************
+Joins
+Indexing
+trigger
+view
+cursor
+procedure
+primary and forgien key
+update query syntax
+delete vs truncate
+what happens when a parent table data is deleted which has a relationship with child table as forgien key -- will it delete or will throw error ?
+Unique constraint
+
+********Hibernate********
+cascade
+fetchtype
+all the relationships and the default fetchtypes for them ? like one to one, one to many etc...
+
+**************Spring, SpringBoot************
+Spring core features
+ioc
+dependecy injection
+Annotations used 
+@controller vs @restcontroller
+how will you configure 2 datasoucers in single application?
+how will you exclude the default emebeded tomcat from spring web ?
+@autowired vs @bean
+scope
+
+**********RESTful webservices**************
+What is REST ?
+Soap vs REST
+Http methods ---- post put get
+post vs put
+Resttemplate
+how will you create a basic rest based application?
+
+***********Microservices****************
+How will you call from one microservice to other ? --- restemplate.exchange
+advantages and disadvantages of microservices
+Eureka
+api gateway
+
+
+
+1. Marker Interface
+2. String intern
+3. Hibernate Cascade
+4. Composite key
+5. Ways to declare @bean
+6. How to show sql queries
+7. Spring actuator
+8. Spring security
+9. Fetch Types
+10. Generic Types why do we use?
+11. @Autowired
+12. Primary Key and Unique Constraints
+13. equals and == , hashcode
+14. String constant pool
+15. Multithreading
+16. Ways to create a thread
+17. Life cycle of a thread
+18. Internal workings of Hashmap and set
+19. Life cycle of spring beans
+20. Hibernate load and get
+21. Hibernate Session & Session factory
+22. 	
+23. Immutable class
+24. What happens when two key with same value in Hashmap
+25. Inheritance
+26. Abstract and interface
+27. Association
+28. Abstraction
+29. SCP
+30. @Service and @Component
+31. Eager and Lazy load in hibernate
+32. Design patterns
+33. Scheduling job using cron for every one hour
+34. Spring batch processing
+35. Composite key
+36. Transient
+37. Sort the string in alphabetically using streams
+38. Sort the list in ascending order using streams
+39. Find the second maximum in list using streams
+40. How to find by name start withs 'a' in JPA
+41. Circuit breaker
+42. JPA queries
+
+43. Query to find duplicate and delete the duplicate 
+44. Singleton bean in spring
+45. Will set allows duplicate - if two different object with same data
+46. Will list maintain insertion order , and map maintain insertion order
+47. most occurring element in list java with limit in java
+48. Predicate vs comparator
+49. Java Stream Example : Convert List into Set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,346 @@
+Angular
+1) Angular is framework for building Single page client applications in HTML, css, javascript/typescript
+2) Clean and loosely 	coupled structure and lot of reusabe code and easy to test 
+3) API - Application Programming Interface - HTTP Services 
+4) Node js - runtime enviroinment to execute the javascript outside the browser, stable version - 6 and latest version 8
+5) cmd prompt - node --version
+6) NPM - node package manager - tool used to install third party libraries
+7) Angular CLI - Command line interface ( to create new angular project and create deployable packages)
+8) npm install -g @angular/cli in the cmd and ng --version to check the angular cli version
+9) ng server - to build and run the code
+10) e2e - end to end folder to write the end- end tests
+11) node modules -  folder to store thitd party libraries for development and while deploying these libraries are put in bundle and deployed with our application
+12) assestes folder to store the static assestes like images etc
+13) enviroinment folder to store configuration settings for differenet enviroinment that is enviroinment.prod for production and other for development enviroinment.ts
+14) main.ts file is the starting point of the application
+15) PollyFills fills the gap between the features of javascript and angular needs and features supported by the current browsers
+16) styles.css add global styles for the application
+17) package.json file that includes name, version and needed dependencies for the application
+    devDependencies is purely for developemnt not to run the application in the prod but this is only for developer machine
+18) tsconfig.json file fot typescript compiler settings based on this compiler compiles the typescript code to javascript code that browsers can understand
+19) webpack compiling - angular cli uses webpack tool which is build automation tool gets all your styles and scrip put them n a bundle and minimize the bundle for optimatization
+20) Typescript - its is a super set of javascript
+      features strong typing - no need to mention the type of variable when create variable
+		object oriented features like class, interface, constructors, access modifiers etc..
+		catch compile time errors
+21) npm install -g typescript
+22) var keyword - when it is defined anywhere in the function its is available in that whole function
+    let keyword -  when defiend in the block of code then it is accessible inside that code only
+	let count = 5;
+	count = 'a' ----- errors
+	
+	let a;
+	a = 5;
+	a = 'count';
+23)possible to create enum  -> enum color {Red, Green, Blue};
+	enum color {Red=0, Green=1, Blue=2}
+   let backgroundColor = Color.Blue;
+24) Arrow function -> let log = (message) => console.log(message);
+25) When a variable is created in the constructor then need not to create at global level
+   constructor(private x:number, public y:number)
+26) export class to use in other components
+27) Component which encapsulate the data and html and logic for the view,  application should contain one component like AppComponent
+	Creating a component
+	add or register in the module
+	add a html template in the component
+28) Module is container for a group of related components, application should contain one module like AppModule
+29) @Injectable() - in the service class constructor if any service object is created then need to add @Injectable annotation
+    @Component default have the @Injectable annotation
+   to use [(ngModel)]  - need to import FormsModule in the app module
+30) Ways to transfer data from one componet to another
+	1) Parent to child
+	2) child to parent via output() and eventemitter
+	3) child to parent via viewchild
+	4) via a service
+	1) Parent to child
+	    @Input is a decorator which allows you to accept the input from the parent component. Input can be imported from @angular/core.
+	     <app-course [inputfromParent]="inputfromParent"></app-course> in parent html
+		 inputfromParent = "This is from Parent"; in parent component;
+		 
+		 @Input() inputfromParent:string = '' in child component;
+		 {{inputfromParent}} in child html
+		  
+		  Using setters in child componet:
+		   inputfromParentVal = ""
+
+		  @Input() set inputfromParent(value: string) {
+			this.inputfromParentVal = value;
+		  }
+		  get inputfromParent() {
+			return this.inputfromParentVal;
+		  }
+		  
+    2) child to parent via output() and eventemitter
+	    @Output() inputfromChild = new EventEmitter<string>(); - in child component
+		 changeChildValue(){
+			this.inputfromChild.emit(this.inputfromChildVal);
+		  }
+		  
+		In Parent:
+		 <app-course [inputfromParent]="inputfromParent" (inputfromChild)="getData($event)"></app-course> in parent html
+		 getData(value){
+		 }
+		 
+	3) child to parent via viewchild
+	    using @ViewChild
+		In Parent:
+			@ViewChild(ChildComponet) child:any
+			onView(){
+				this.inputfromChild = this.child.inputfromChildVal;
+			}
+		In Parent HTML:
+			<button (click)="onView()" name='Click'>Click</button>
+			
+	4) via a service
+		In Service File:
+			serviceMsg = new BehaviorSubject("Message from Service");
+			getMessage = this.serviceMsg.asObservable();
+			
+			setMessage(msg){
+				this.serviceMsg.next(msg);
+			}
+		In Component:
+		    in Constructor:
+				constructor(public courseService: CourseService){
+					this.courseService.getMessage.subscribe((msg)=> this.message = msg);
+				}
+	        updateMsg(){
+			    this.courseService.setMessage("Updated Msg");
+			}
+31) The Angular 8 directives are used to manipulate the DOM. By using Angular directives, 
+	you can change the appearance, behavior or a layout of a DOM element. It also helps you to extend HTML.
+	  1)Component Directives
+	  2)Structural Directives
+	  3)Attribute Directives
+		@Component is the component directives that includes selector, templateurl, styleUrls
+		Structural directives are with * sign like *ngIf, *ngFor, *ngSwitch
+		Attribute directives are used to change the look and behavior of the DOM element. It provides the facility to create our own directive. 
+		 ngClass and ngStyle are inbuild directive
+			@Directive({
+			  selector: '[decimalnumber]',
+			  host: {
+				'(input)': 'onInputchange($event)'
+			  },
+			  providers: [{ provide: NG_VALIDATORS, useExisting: forwardRef(() => DecimalNumber), multi: true }]
+			})
+			@Input() numberplaces = 5;
+			  onInputchange($event) {
+			this.value = $event.target.value;
+		  }
+	  <input type="text" decimalnumber numberplaces>
+	  
+32) Angular forms are used to handle user's input. To enable user login, to update profile, to get information
+     1) Reactive forms
+	 2) Template-driven forms
+	1) Reactive  forms
+	    To use reactive forms need to import ReactiveFormsModule in the app.module.ts imports section
+		Need to import FormControl class into the component
+			  email = new FormControl('');  
+			  this.email.setValue('sonoojaiswal@javatpoint.com');  
+			  this.formdata = new FormGroup({
+				 emailid: new FormControl("angular@gmail.com"),
+				 passwd: new FormControl("abcd1234")
+			  });
+
+		Reactive forms are more powerful and offer greater control over form behavior
+			<label>  
+			  Name:  
+			  <input type="text" [formControl]="name">  
+			</label> 
+			
+			 <input type = "password" class = "fortextbox" name="passwd" 
+				 placeholder = "passwd" formControlName = "passwd">
+			  <br/>
+			  
+	2) Template-driven forms
+		To build simple form with minimal validation
+		To use Template-driven forms need to import FormsModule in the module file
+		In Component:
+			  model = new Hero(18, 'Dr IQ', this.powers[0], 'Chuck Overstreet');  
+			  submitted = false;  
+			  onSubmit() { this.submitted = true; }  
+		In HTML:
+			<div class="container">  
+			<h1>Hero Form</h1>  
+			<form>  
+			  <div class="form-group">  
+				<label for="name">Name</label>  
+				<input type="text" class="form-control" id="name" required>  
+			  </div>  
+			  <div class="form-group">  
+				<label for="alterEgo">Alter Ego</label>  
+				<input type="text" class="form-control" id="alterEgo">  
+			  </div>  
+			  <button type="submit" class="btn btn-success">Submit</button>  
+			</form>  
+		</div>
+33) Pipes takes integers, string, array and date as input seprated with |. It transforms the data in the mentioned format and displayed in the browser
+    Pipes delas with the value
+		<h1>  {{ title | lowercase }} <br/></h1>  
+		<h1>  {{ title | uppercase }} <br/></h1> 
+	In built datepipes are,
+		Lowercasepipe
+		Uppercasepipe
+		Datepipe
+		Currencypipe
+		Jsonpipe
+		Percentpipe
+		Decimalpipe
+		Slicepipe
+		
+		 <b>{{todaydate | date:'d/M/y'}}</b><br/>  
+		 <b>{{6589.23 | currency:"USD"}}</b><br/>  
+		 <b>{{ jsonval | json }}</b>  
+		 <b>{{00.54565 | percent}}</b>  
+		 <b>{{months | slice:2:6}}</b>  
+		 <h1>Decimal Pipe</h1> <b>{{ 454.78787814 | number: '3.4-4' }}
+
+    Custom Pipes :
+		@Pipe({
+			name: 'DateFormatPipe',
+			pure: true
+		})
+		export class DatePipe implements PipeTransform {
+
+			constructor() { }
+
+			transform(input: string, valueFormat?: string, displayFormat?: string, customField?: string): string {
+			}
+		}
+		
+		 <td>{{rowData.tradeDateStr | DateFormatPipe: 'DD-MM-YYYY':'DD.MM.YYYY':'DEFAULT' }}</td>
+		 
+34)  Http Service hepls us to fetch external data, post etc., Need to import HttpModule in th module file to use http service.
+     In Component:
+	   import { Http } from '@angular/http';
+	   constructor(private http: Http) { }
+	   this.http.get("http://jsonplaceholder.typicode.com/users").
+      map((response) ⇒ response.json()).
+      subscribe((data) ⇒ console.log(data))
+	  Http is deprecate in Angular 5
+	Http Client:
+		add HttpClientModule in the app.modue.ts file
+		import { HttpClient } from '@angular/common/http';
+		 constructor(private http: HttpClient) { }
+		this.http.get("http://jsonplaceholder.typicode.com/users?id="+this.searchparam)
+			.subscribe((data) => this.displaydata(data)); 
+35) Navigation and Routing
+      Angular is the single page application. Routing process of defining navigation element and the corresponding view is called routing.
+	  To move from one page to another with the help of RouterModule. 
+	  ng new routing-app --routing
+		import { NgModule } from '@angular/core';
+		import { Routes, RouterModule } from '@angular/router';
+		import { HomeComponent } from './home/home.component';
+		import { LoginComponent } from './login/login.component';
+
+		const routes: Routes = [
+		  { path: '', component: LoginComponent },
+		  { path: 'home', component: HomeComponent }
+		];
+
+		@NgModule({
+		  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+		  exports: [RouterModule]
+		})
+		export class AppRoutingModule { }
+	 Add AppRoutingModule in the app.module.ts
+     Add <router-outlet></router-outlet> in app.component.html
+	 
+	 <a routerLink = "new-cmp">New component</a> in the user html file for routing
+36) Angular uses Observable as an intreface to handle many common asynchronous operations. Observable provide support for sharing data between publishers and subscribers 
+	Angular's HttpClient returns the observable from the HTTP method call.
+	this.allocationService.getErrorClientCode().subscribe(data => {
+      if (data) {
+        obj.errorClientCode = data.errorClient;
+      }
+    });
+	 getErrorClientCode(): Observable<any> {
+		return this.http.get(this.baseurl + 'dealsheet/dealprocess/errorClient');
+	}
+	
+		public getData(){
+			const fakeData = new Observable(observer =>{
+				setTimeout(() => {
+					observer.next(this.getMessageData());
+					observer.complete();
+				}, 3000);
+				});
+		}
+		
+		this.localservice.getData().subscribe( (data) =>{
+			this.data = data;
+		}
+
+	Promise provide easy way to handle asynchronous request easily that uses callbacks, while emitting and completing(rejecting and resolving) one value at  time.
+	const isPrime = new Promise<string>((resolve,reject) =>{
+		if(this.value ==1){
+			reject("reject successfully");
+		}
+		resolve("resolved successfully");
+	});
+	
+	isPrime.then((value) =>{
+		console.log(value);
+		}).catch((error) =>{
+			console.log(error);
+			});
+	
+	
+	  ANGULAR OBSERVABLES												ANGULAR PROMISES
+
+	1) Can handle both synchronous and asynchronous events          Can only handle asynchronous data returns
+
+	2) Emit and complete 0, 1, or multiple values over a 
+	period of time (stream data in multiple pipeline)			Only emit one value at a time (have one pipeline)
+
+	3) Offer operations like map, filter, reduce, retry(),
+	 or replay(), map, forEach, and more						Do not provide operators
+
+	4) Are cancellable, using the unsubscribe() method, 
+	meaning the listener doesn’t receive further values 		Are not cancellable
+
+	5) Are lazy, i.e., the producer function triggers after		Are eager, i.e., the Promise callback executes immediately and only once
+	 users subscribe to the stream 								at the moment of its definition, without .then and .catch 
+	 
+	6) Subscribers handle errors									Push errors to the child Promises
+
+
+37) Life cycle hooks
+			1) ngOnchanges() - Calls before ngOninit when the compound has the data-bound input properties.
+							   ngOnChanges() is not (which is the case when there are no template-bound inputs)
+			2) ngOnInit()  - called once after the first ngOnChanges(). Called when component initializes
+			3) ngDoCheck() - To monitor changes that occur where ngOnChanges() won't catch them, implement your own change check, as shown in the DoCheck example
+			4) ngAfterContentInit()
+			5) ngAfterContentChecked()
+			6) ngAfterViewInit()
+			7) ngAfterViewChecked()
+			8) ngOnDestroy() - Cleanup just before Angular destroys the directive or component. Unsubscribe Observables and detach event handlers to avoid memory leaks.
+38) Lazy Loading:
+		Lazy loading is a technology of angular that allows you to load components when a specific route is activated. It improves application load time speed by 
+		splitting the application into many bundles. When the user navigates by the app, bundles are loaded as needed.
+		
+		Using forChildren:
+			   export const equityManifests: DynamicComponentManifest[] = [ {
+					componentId: 'thaibo.equity.tradeprocess.buyintransaction',
+					path: 'thaibo.equity.tradeprocess.buyintransaction',
+					loadChildren: () => import('../../projects/equity-client-lib/src/lib/tradeprocess/buyintransaction/buyintransaction.module').
+						then(m => m.BuyInTransactionModule)
+				}]
+
+			@NgModule({
+			  declarations: [
+				AppComponent
+			  ],
+			  imports: [
+				BrowserModule, BootstrapModule.forRoot(),
+				RouterModule.forRoot(routes, {}), DynamicComponentLoaderModule.forRoot(manifests)
+			  ],
+			  providers: [],
+			  bootstrap: [BootStrapComponent]
+			})
+			export class AppModule { }
+39) Ahead of Time (AOT) compilation converts your code during the build time before the browser downloads and runs that code. 
+	This ensures faster rendering to the browser. To specify AOT compilation, include the --aot option with the ng build or ng serve command. 
+
+	The Just-in-Time (JIT) compilation process is a way of compiling computer code to machine code during execution or run time.
+    It is also known as dynamic compilation. JIT compilation is the default when you run the ng build or ng serve CLI commands. 

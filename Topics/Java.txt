@@ -1,0 +1,149 @@
+1.An interface is a reference type in Java. It is similar to class. It is a collection of abstract methods. A class implements an interface,
+ thereby inheriting the abstract methods of the interface.
+Along with abstract methods, an interface may also contain constants, default methods, static methods, and nested types. 
+Method bodies exist only for default methods and static methods.Since Java 8, we can have default and static methods in an interface.
+2.Since Java 9, we can have private methods in an interface.
+3.Java Supports call by value not call by reference, call by value is passing an value to method that affects the value in  the calling method
+4. String literal like "" stores memory in SCP where new String() stores in heap momory 
+ JVM used SCP which is for efficient memory management in Java.Unlike other Java objects, instead of managing String object on the heap area, they introduced the String constant pool.
+ One of important characteristic of String constant pool is that it does not create the same String object if there is already String constant in the pool.
+5. intern method checks in scp where the string literal is present or not in scp if not then create n scp
+6. Duplicate count 		Map<String, Long> map1 = Arrays.stream(strArr).collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+7. Refer Digitalocean for Java Threads
+8.Thread.sleep() method can be used to pause the execution of the current thread for a specified time in milliseconds. 
+9) Create one Static variable in class of that class type (private static Singleton s = null;   )
+   Create a Static getInstance method that return an instance of a class when it is not available
+   create a private constructors so its not having scope to other classes
+10) immutable string or objects that cannot be modified once it is created. But we can only change the reference to the object.
+ We restrict to change the object itself. The String is immutable in Java because of the security, synchronization and concurrency, caching, and class loading.
+11) Create Immutable class by creating a final class and final data member. In short, all wrapper classes and String is immutable
+12) The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the normal flow of the application can be maintained.
+13) Java throw keyword is used throw an exception explicitly in the code, inside the function or the block of code.	
+    Java throws keyword is used in the method signature to declare an exception which might be thrown by the function while the execution of the code.
+	We are allowed to throw only one exception at a time i.e. we cannot throw multiple exceptions.	
+	We can declare multiple exceptions using throws keyword that can be thrown by the method. For example, main() throws IOException, SQLException.
+14) An exception is first thrown from the top of the stack and if it is not caught, it drops down the call stack to the previous method. If not caught there, the exception again drops down to the previous method, and so on until they are caught or until they reach the very bottom of the call stack. This is called exception propagation.
+15)Java Reflection provides ability to inspect and modify the runtime behavior of application. 
+  Using java reflection we can inspect a class, interface, enum, get their structure, methods and fields information at runtime even though class is not
+  accessible at compile time. 
+  We can also use reflection to instantiate an object, invoke it’s methods, change field values.
+  We can get class of an object by three methods 1) throgh static variable class, 2) getClass() method 3) Class.forName("com.journaldev.reflection.ConcreteClass"); java.lang.Class.forName(String fullyClassifiedClassName) fullyClassifiedClassName - 
+  Get package name by Class.forName("com.journaldev.reflection.BaseInterface").getPackage().getName()
+  TypeVariable<?>[] typeParameters = Class.forName("java.util.HashMap").getTypeParameters();
+  Method[] publicMethods = Class.forName("com.journaldev.reflection.ConcreteClass").getMethods();
+  Constructor<?>[] publicConstructors = Class.forName("com.journaldev.reflection.ConcreteClass").getConstructors();
+  Field[] publicFields = Class.forName("com.journaldev.reflection.ConcreteClass").getFields();
+  java.lang.annotation.Annotation[] annotations = Class.forName("com.journaldev.reflection.ConcreteClass").getAnnotations();
+  Field field = Class.forName("com.journaldev.reflection.ConcreteClass").getField("interfaceInt");
+  
+  
+16) The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+  Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+  List - Ordered elements, may allow duplicates, index-based search, random access but elements can be easily inserted irrespective of the position.
+  Set - Not allow duplicates. doesn't define an order for the elements hence index - based search is not spported.
+  Queue - Follows FIFO
+  Map - Map not implements Collection Interface, unique key but duplicate values
+17)  ArrayList - The ArrayList class implements the List interface. It uses a dynamic array to store the duplicate element of different data types. 
+	The ArrayList class maintains the insertion order and is non-synchronized. The elements stored in the ArrayList class can be randomly accessed.
+	LinkedList - LinkedList implements the Collection interface. It uses a doubly linked list internally to store the elements. 
+	It can store the duplicate elements. It maintains the insertion order and is not synchronized. In LinkedList, the manipulation is fast because no shifting is required.
+	Vector - Vector uses a dynamic array to store the data elements. It is similar to ArrayList. Maintaions teh insertion order and thread safe.
+	However, It is synchronized and contains many methods that are not the part of Collection framework.
+	Stack - LIFO
+18) Set -  It represents the unordered set of elements which doesn't allow us to store the duplicate items. We can store at most one null value in Set. 
+	Set is implemented by HashSet, LinkedHashSet, and TreeSet.
+	HashSet - It represents the collection that uses a hash table for storage. Hashing is used to store the elements in the HashSet. 
+	It contains unique items  and allows one null value. No insertion order.
+	LinkedHashSet - Like HashSet, It also contains unique elements. It maintains the insertion order and permits null elements.
+	TreeSet - it is sorted set that uses a tree for storage. Like HashSet, TreeSet also contains unique elements. However, the access and retrieval time
+	of TreeSet is quite fast. The elements in TreeSet stored in ascending order.
+	The TreeSet object doesn't allows null values but, If you try to add them, a runtime exception will be generated at.07-Aug-2019
+	A Set is a Collection that cannot contain duplicate elements.
+
+19) A map contains values on the basis of key, i.e. key and value pair. Each key and value pair is known as an entry. A Map contains unique keys.
+	A Map doesn't allow duplicate keys, but you can have duplicate values. HashMap and LinkedHashMap allow null keys and values, but TreeMap doesn't allow any null key or value.
+	It's Non-synchronized.
+	HashTable - It's synchronized.
+	HashMap - HashMap is the implementation of Map, but it doesn't maintain any order.
+	It can contain a single null key and multiple null values.	
+	It does not allow duplicate keys, but duplicate values are allowed.	
+	Java HashMap is non synchronized.Java HashMap maintains no order.Java HashMap may have one null key and multiple null values.
+	
+	LinkedHashMap - LinkedHashMap is the implementation of Map. It inherits HashMap class. It maintains insertion order.
+	Java LinkedHashMap class is Hashtable and Linked list implementation of the Map interface, with predictable iteration order
+	Java LinkedHashMap contains unique elements.Java LinkedHashMap may have one null key and multiple null values.
+	Java LinkedHashMap is non synchronized.
+	
+	TreeMap - TreeMap is the implementation of Map and SortedMap. It maintains ascending order.
+	Java TreeMap cannot have a null key but can have multiple null values.
+	Java TreeMap is non synchronized.Java TreeMap maintains ascending order.
+	A TreeMap is always sorted based on keys. The sorting order follows the natural ordering of keys. You may also provide a custom Comparator to the TreeMap at the 
+	time of creation to let it sort the keys using the supplied Comparator.
+	If you try to insert the duplicate key, it will replace the element of the corresponding key.
+	
+	ConcurrentHashMap - ConcurrentHashMap is a subclass of HashMap and is designed to be used in multi-threaded environments.
+	 a Java class that enables multiple threads to access the map at the same point of time. It is a part of the Java Collections Framework, 										
+	 and it provides a way for applications to efficiently handle concurrent updates to the map.
+	 
+	 Map does not extend collection interface becuase of key value pair becuase collection interface doesn't support key value pair insert. 
+20) Comparable and Comparator both are interfaces and can be used to sort collection elements.
+	1) Comparable provides a single sorting sequence. In other words, we can sort the collection on the basis of a single element such as id, name, and price.
+    2) Comparable provides compareTo() method to sort elements.	
+	3)Collections.sort(List) 	
+	@Override
+    public int compare(Bicycle a, Bicycle b) {
+        return a.getFrameSize().compareTo(b.getFrameSize());
+    }
+
+	1)The Comparator provides multiple sorting sequences. In other words, we can sort the collection on the basis of multiple elements such as id, name, and price etc.
+	2)Comparator provides compare() method to sort elements.
+	3)Collections.sort(List, Comparator)
+	
+21) Serialization in Java is a mechanism of writing the state of an object into a byte-stream. It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+	The reverse operation of serialization is called deserialization where byte-stream is converted into an object. 
+	The serialization and deserialization process is platform-independent,
+	it means you can serialize an object on one platform and deserialize it on a different platform
+	
+22) Externalization in Java is used to customize the serialization mechanism. Java serialization is not much efficient. 
+23) Volatile keyword is used to modify the value of a variable by different threads. It is also used to make classes thread safe.
+   It means that multiple threads can use a method and instance of the classes at the same time without any problem.
+24)native: Java native keyword is used to specify that a method is implemented in native code using JNI (Java Native Interface).
+
+25) FileInputStream is used for reading streams of raw bytes of data, like raw images. FileReaders, on the other hand,
+ are used for reading streams of characters
+The difference between FileInputStream and FileReader is, FileInputStream reads the file byte by byte and FileReader reads the file character by character.
+
+26)In JPA, if any operation is applied on an entity then it will perform on that particular entity only. These operations will not be applicable to the other entities that are related to it.
+   To establish a dependency between related entities, JPA provides javax.persistence.CascadeType enumerated types that define the cascade operations. 
+   These cascading operations can be defined with any type of mapping i.e. One-to-One, One-to-Many, Many-to-One, Many-to-Many.
+   Persist, detach, merge, and REMOVE
+   
+27) Fail Fast and Fail Safe Iterator.
+	Fail-fast throws ConcurrentModificationException, when one thread is iterating the collection the other thread is modify the collection by adding, removing,
+	modifying collection it throws the exception.
+	Fail-Safe iterator doesn't throw exception if collection is modified simultaneously. It works on the process of clone of collection instead 
+	of oriinal collection. ex - ConcurrentHashMap
+	
+28) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+

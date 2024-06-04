@@ -1,0 +1,87 @@
+ entityManager.unwrap(Session.class).doReturningWork(new ReturningWork<List<AllocContClientList>>() {
+			@Override
+			public List<AllocContClientList> execute(Connection con) throws SQLException {
+			CallableStatement cs = con
+						.prepareCall("{ call PR_DEAL_ALLOCATION_FETCH(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) }");
+				cs.setString(1, filter.getLookupType());
+				cs.registerOutParameter(18, OracleTypes.CURSOR);
+				cs.execute();
+
+				ResultSet rs = (ResultSet) cs.getObject(18);
+				
+2) Connection con = DriverManager.getConnection(url,name,pwd);
+  PreparedStatement p = con.getPrepareStatement(sql query);
+  p.setString(1,"");
+  ResultSet rs = p.executeQuery();
+  while(rs.next()){
+  Entyiy e = new Entity(rs.getLong("ColumnName"));
+  }
+  
+1) Why not 100% Object Oriented Programming
+  Because of primitive data types. It Supports primitive data types that are not objects. Hence these data types like int, float, double, etc., are not object-oriented. 
+
+2) Why pointers not used?
+   1) They are unsafe 2)Increase the complexity of code 3)JVM is responsible for memory allocation, so jvm does the job, pointers also holds or allocates the 
+   memory. To Avoid direct access to memory by the user.
+ 
+3) JIT Compiler?
+   Just In Time Compiler
+   Java Code -> JDK(java.exe) ---Byte code) -> JRE(Interpreter + JIT) --- Machine Code
+   JDK - Converts java code to byte code
+   JVM, JRE, and JDK all are platform dependent as it requires different configuration for different OS
+   Interpreter - reads byte code line by line and convert to machine code
+   JIT - Increase the time, converts bulk of byte to machine code
+ 
+4) String Pool requires the string to be immutable otherwise the reference can be changed anywhere. And alos for security purposes.
+5) Can you override a private or static method or main method?
+   1)You cannot override the private or static methods in the java
+   2)Private methods or not visible to any other class which limits their scope to the class in which they declared.
+   3)No, we cannot override static methods because method overriding is based on dynamic binding at runtime and the static methods are bonded using static binding at compile time.
+
+6) Does finally always execute in java?
+   Not in System.exit function and system crash
+
+7)Object is parent of all the objects in the java. It has method like clone(), equals(), finalize(), getclass(), hashcode(), toString(), notify(), notifyall(),wait()  .
+
+8) Make class Immutable
+  1) Create a final class 2) Make all fields as private 3) make all fields as final 4) Initialize all fields using constructors
+  4) Dont provide setters for the fields
+ 
+9) Diff between Synchronized and Concurrent Collection
+   1) Both are thread safety
+   2) Difference comes in Performace, Scalability and how they achieve thread safety
+   3) Synchronized HashMap or any Synchronized Collections are slower than concurrent collectio like ConcurrentHashMap, Reason for slowness is locking
+   Synchronized Collection - When one thread write in segment 1 and its locks all the segments and  other threads need to wait
+   Concurrent Collection - When one thread write in segment 1 and its locks that segment only and  other threads use the other segments
+
+10) Arrays.sort(arr);
+	Arrays.toString(arr);
+
+11) You cannot change or reduce the visibility of the inhertited method in sub class it wil throw compile time exception.
+    if in parent the method is default means the sub class method must be default or protected or public
+	Hierarchy - Private -  Default - Protected - Public
+	
+12) Shawoding Variable 
+    1)In parent and child class have overriden methods as public void getSomething();  Animal - Parent, Dog - Child
+	Animal animal = new Dog();
+	animal.getSomething() - calls sub class method;
+	Animal animal = new Animal();
+	animal.getSomething() - calls Parent class method;
+	
+	2)In parent and child class have static methods as public static void getSomething();  Animal - Parent, Dog - Child
+	Animal animal = new Dog();
+	animal.getSomething() - calls Parent class method;
+	** Static method  call by refernce not by Object memory allocated
+	** Non static methods call by object memory allocated not by refernce
+	
+13) Aggregation - weak association one can exist without another
+    Composition - Strong association - tightly coupled - when one delete other also deleted
+
+14) Throwable is the parent of all Exception Class
+    Checked Exceptions - That need to check or throw at compile time like SQLException, IO Exception, Class Not Found Exception
+	UnChecked Exception - that need to hanlde at runtime (Null pointer, Number Format , Index out of bound exception)
+	Error - Stack overlow error, Outof memoryerror, virtual memory error
+    try {
+
+		} catch (NullPointerException | ArrayIndexOutOfBoundsException e) {
+		}

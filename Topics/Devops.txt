@@ -1,0 +1,21 @@
+devops
+business
+
+problem - 
+
+shift manage one year or two year couple of monthns 
+
+
+Agile methodology is a process that used to managing a project with team collabiration and in iteration process.
+breaks the project into phasess and changing the requirements.
+1)conecept - project scope, 2)Inception - building team, 3)Iteraton - create code based on customer feedback 4)release 5)Maintenance 6)Retirement
+1) Scrum 2)Kanban 3)Lean and other two methodology
+
+Scrum - Rapidly changing requirements using short sprints
+Kanban - visualizes project process and is great for task requires steady output
+
+Waterfall model - requirement gathering, design, build, test driven. Need to complete one phase befor the other starts.
+
+Scrum - Sprints
+1)Retirement gathering by BA's 2)Sprint Planning  after daily scrum calls 3) Collabirative design developement (Devlop and user involves till the end developemnt)
+4)Create and implement (devlop using sprints and testing and chenges from user) 5)Maintenance

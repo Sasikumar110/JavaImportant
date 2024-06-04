@@ -1,0 +1,40 @@
+1)java.lang.String implements the Comparable interface, where custom objects doesn't implement Comparable interface
+2) For Custom objects there is no Comparable interface we need to implement that in model and add an override method as compareTo a
+and add sort functionlaity in that.
+3) Comparable is able to sort by only field
+
+ex -   Collections.sort(persons); -  for string integer and double it;s fine
+
+ex- for custom entity objects we need to implement in entity object
+public class Person implements Comparable<Person> {
+public int compareTo(Person person) {
+        return this.age > person.age ? 1 : this.age < person.age ? -1 : 0;
+    }
+	
+	}
+	Collections.sort(persons);
+
+1)Comparator - able to sort by more than one fields,
+
+Collections.sort(persons, new Comparator<Person>() {
+            public int compare(Person person, Person person1) {
+                int name = person.getName().compareTo(person1.getName());
+                if(name == 0){
+                    return name;
+                }
+                return person.getAge() > person1.getAge() ? 1 : person.getAge() < person1.getAge() ? -1 : 0;
+            }
+        });
+
+Collections.sort(colDetails, Comparator.comparing(FileColumn::getColumnOrder));
+	
+Collections.sort(data,
+						Comparator
+								.comparing(CommonPreConfirmAllocView::getFundCode,
+										Comparator.nullsFirst(Comparator.naturalOrder()))
+								.thenComparing(CommonPreConfirmAllocView::getBuySell)
+								.thenComparing(CommonPreConfirmAllocView::getStkName));			
+								
+Collections.sort(mainAcctList, Comparator.comparing(AccountsHierarchyView::getSubCode,
+					Comparator.nullsFirst(Comparator.naturalOrder())));								
+								

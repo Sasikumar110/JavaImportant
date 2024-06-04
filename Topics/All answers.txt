@@ -1,0 +1,265 @@
+1) Marker interface:
+  An interface that does not contain any methods, constants, fields is known as Marker Interface. Its also known as empty or tag nterface. It delivers run-time 
+  type information about the object.
+  inbuild interfaces are Serializable and Cloneable, Remote interface.
+  Marker Intercae intimates the compiler that it has some operations to done like clone or serialize
+Serializable Interface;
+   Its a marker interface. 	Define in java.io package. Make a class serializable by implementing serializable interface. It a serializable class able to 
+   serialize and deserialize the state of an object of class. Serializable is a mechanism i which object state is read from the memory and write to file or database.
+   Deserialize is a mechanism which object state is read from the file or database and write back to memory.
+   Serializable is achived with ObjectOutputStream class and Deserialize is achived with ObjectInputSTream Class
+   FileOutputStream  fo = new FileOutputStream ("filename.txt");
+   ObjectOutputStream ob = new ObjectOutputStream(fo);
+   ob.writeObject(Employee);
+   ob.flush();
+   ob.close();
+   Deserialization:
+   FileInputStream fi =new FileInputStream("filename.txt");
+   ObjectInputStream oi = new ObjectInputStream(fi);
+   Employee e = (Employee)oi.readObject(oi);
+   oi.flush();
+   oi.close();
+   
+Cloneable Interface:
+   Cloneable interface is also marker interface. It generates replica(copy) of an object with different name. Implement the interface in class of which object 
+   to be cloned.It indicates the clone() method of the Object class.
+   If we do not impelement the Cloneable interface in class and invoke the clone method, it throws ClassNotSupportedException.
+   Note that a class that implements the Cloneable interface must override the clone() method with a public method.
+
+	Product p1 = new Product(pid, pname, pcost);  
+	Product p2 = (Product) p1.clone();
+
+	class CloneDemo implements Cloneable {
+		int id;
+		String name;
+
+		public CloneDemo(int id, String name) {
+			super();
+			this.id = id;
+			this.name = name;
+		}
+
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
+		}
+
+		@Override
+		public Object clone() throws CloneNotSupportedException {
+			return super.clone();
+		}
+
+	}
+
+public class ClonableExample {
+
+	public static void main(String[] args) throws CloneNotSupportedException {
+
+		CloneDemo p1 = new CloneDemo(1, "test");
+		CloneDemo p2 = (CloneDemo) p1.clone();
+	}
+}
+
+Remote Interface
+   Remote Interface is also marker interface.It marks an object as remote that is accessed from the another machine.
+   We must implement the Remote interface if we want to make an object as remote.
+	   import java.rmi.*;  
+	public interface AddAll extends Remote  
+	{  
+	public int add(int r, int s)throws RemoteException;  
+	}  
+
+Custom Marker Interface
+	Apart from built in marker interface. java allows to create own marker interface.
+	interface Car     
+	{  
+	   
+	} 	
+		
+	class Vehicle implements Car      
+	{  
+		static void isVehicle()  
+		{  
+		System.out.println("Car is a vehicle.");  
+		}  
+	}  
+	public class CustomMarkerInterfaceExample  {
+	public static void main(String args[]){
+	
+	Vehicle.isVehicle();
+	}
+	
+	}
+
+
+ 2) Hibernate Cascade Types
+    It is applied on entity relationsip,When we perform some operations on the target entity, the same action will be applied to associated entity.
+    Cascade Types - All, Persist, merge, detach, remove,Refresh
+	Persist:
+	When we save the target entity the associated entity also gets saved.  @OneToMany(mappedBy = "person", cascade = CascadeType.Persist)
+	Merge:
+	if the parent entity is merged then all its related entity will also be merged.
+	Detach:
+	If the parent entity is detached then all its associated entity is detached.
+	Refresh:
+	If the parent entity is refreshed then all its related entity will also be refreshed.
+	Remove:
+	if the parent entity is removed then all its related entity will also be removed.
+
+3) Ways to create a bean - 
+	Annotation Based Configuration - By using @Service or @Component annotations. Scope details can be provided with @Scope annotation.
+	XML Based Configuration - By creating Spring Configuration XML file to configure the beans. If you are using Spring MVC framework, the xml based configuration can be loaded automatically by writing some boiler plate code in web.xml file.
+	Java Based Configuration - Starting from Spring 3.0, we can configure Spring beans using java programs.
+		Some important annotations used for java based configuration are @Configuration, @ComponentScan and @Bean.
+		
+4) Show SQL queries
+	1) spring.jpa.show-sql=true  - show hibernat sql 
+	2) spring.jpa.properties.hibernate.format_sql=true - Format hibernate sql queries
+	3)logging.level.org.hibernate.SQL=DEBUG  - Hibernate prints the SQL and their parameter bindings all along.
+	4)logging.level.org.hibernate.type=TRACE - Hibernate prints the SQL and their parameter bindings all along.
+	
+5) SpringBoot actuator is a sub-project of spring boot application. It help us to manage and monitor the springboot application through endpoints.
+   Use Http and JMX endpoints. features of spring boot actuator are Endpoints, metrics and audit
+   Endpoints :The actuator endpoints allows us to monitor and interact with the application. eg: /health endpoint provides the basic health information of an application. 
+   Metrics: Spring Boot Actuator provides dimensional metrics by integrating with the micrometer.
+   Audit: Spring Boot provides a flexible audit framework that publishes events to an AuditEventRepository. It automatically publishes the authentication events 
+   if spring-security is in execution.
+   
+6) Spring Security - Spring Security framework provides security features like authorization and authentication.
+   Authentication - is the process of knowing and identifying the user that want to access.
+   Authorization - is the process to allow athurity to perform actions in the application. We can apply authorization to authorize web request, methods and access to individual domain.
+   
+7) Fetch Mode - defines hibernate how to fetch the data( by select, join or subselect)
+   Fetch Tye -  defines hibernate how to load the data by eagrly or lazily
+   1) FetchMode JOIN - @Fetch(FetchMode.JOIN)
+       This is also called Eager loading which means load all the collections and relations in a single query.
+   2) FetchMode SELECT(default) - @Fetch(FetchMode.SELECT)
+	   This is also called Lazy loading which means loads the collections and relations only when required
+   3) FetchMode SELECT with Batch Size
+		It loads the sub-entity by batch by batch based on the batch Size.
+		If customer is main entity and orders is sub entity, if customer records are 30 and orders is 30 then one query is generated by hibernate to fetch all 
+		the customer records and three seprate query to fetch orders if the batch size is 10;
+		@OneToMany
+		@Fetch(FetchMode.SELECT)
+		@BatchSize(size=10)
+   4)FetchMode.SUBSELECT - @Fetch(FetchMode.SUBSELECT)
+		Group the collection of an entity into a Sub-Select query.
+		Hibernate generates two query in this case 	(Customer - 10 records then order - 20 records)
+		1)  select customer0_.Id as Id1_1_, customer0_.FirstName as FirstNam2_1_ from customers customer0_. 
+		    where addresses0_.CUSTOMER_ID in ( select customer0_.Id  from customers customer0_)
+			
+	Join - We can prefer this mode whenever we have less data in the sub-entity.
+	SELECT - faster response
+	SELECT with BatchSize - BatchSize is useful when have a fixed set of data.
+	SUBSELECT - This should be used when we have an entity where most of them are loaded in the session.
+
+	if the code doesn't set FetchMode, the default one is JOIN and FetchType works as defined
+	with FetchMode.SELECT or FetchMode.SUBSELECT set, FetchType also works as defined
+	with FetchMode.JOIN set, FetchType is ignored and a query is always eager
+
+8) Generics Types - It is a concept  where you can enable a class, interface, method to accept all reference types as parameters.
+    choose the reference type that a method, constructor of a class accepts, dynamically.
+	By defining a class generic you are making it type-safe i.
+	
+		public class GenericExample<T> {
+
+		T age;
+		public GenericExample(T age) {
+			super();
+			this.age = age;
+		}
+		public void display() {
+			System.out.println(age);
+		}
+		public static void main(String[] args) {
+			GenericExample<Integer> g1 = new GenericExample<Integer>(10);
+			g1.display();
+			GenericExample<String> g2 = new GenericExample<String>("test");
+			g2.display();
+		}
+	}
+	
+	1)Type-safety: We can hold only a single type of objects in generics. It doesn?t allow to store other objects.
+		List list = new ArrayList();    
+		list.add(10);  
+		list.add("10");  
+		With Generics, it is required to specify the type of object we need to store.  
+		List<Integer> list = new ArrayList<Integer>();    
+		list.add(10);  
+		list.add("10");// compile-time error  
+	2) Type casting is not required:
+	3) Compile-Time Checking: 
+	
+	Types Parameters : 
+	 T - Type, E - Element, N - Number, K - Key, V- Value
+	
+	Generic Method: create a generic method that can accept any type of arguments. ere, the scope of arguments is limited to the method where it is declared. 
+	It allows static as well as non-static methods.
+	E -Element
+	public static < E > void printArray(E[] elements) {  
+        for ( E element : elements){          
+            System.out.println(element );  
+         }  
+         System.out.println();  
+    }  
+	
+	WildCards: The ? (question mark) symbol represents the wildcard element. It means any type. If we write <? extends Number>, it means any child class of Number, e.g., Integer, Float, and double. Now we can call the method of Number class through any child class object.
+	Wildcards can be used in three ways
+							Upper bound Wildcard − ? extends Type.
+							Lower bound Wildcard − ? super Type.
+							Unbounded Wildcard − ? ( unknown type)
+
+	public class GenericsTester {
+
+	   //Upper bound wildcard
+	   //in category
+	   public static void deleteCat(List<? extends Cat> catList, Cat cat) {
+		  catList.remove(cat);
+		  System.out.println("Cat Removed");
+	   }
+
+	   //Lower bound wildcard
+	   //out category
+	   public static void addCat(List<? super RedCat> catList) {
+		  catList.add(new RedCat("Red Cat"));
+		  System.out.println("Cat Added");
+	   }
+
+	   //Unbounded wildcard
+	   //Using Object method toString()
+	   public static void printAll(List<?> list) {
+		  for (Object item : list)
+			 System.out.println(item + " ");
+	   }
+
+	   public static void main(String[] args) {
+
+		  List<Animal> animalList= new ArrayList<Animal>();
+		  List<RedCat> redCatList= new ArrayList<RedCat>();
+
+		  //add list of super class Animal of Cat class
+		  addCat(animalList);
+		  //add list of Cat class
+		  addCat(redCatList);  
+
+		  //print all animals
+		  printAll(animalList);
+
+	   }
+	}
+
+
+
+
+

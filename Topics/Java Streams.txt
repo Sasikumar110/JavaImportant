@@ -1,0 +1,33 @@
+1) Print sum of all numbers using reduce
+	Optional<Integer> op1 = Arrays.asList(1,3,4,6,7,2,3).stream().reduce((a,b)-> a+b);
+	op1.get();
+2) Average - Arrays.asList(1,3,4,6,7,2,3).stream().mapToInt(a -> a).average().getAsDouble();
+3) Square, filter, average - Arrays.asList(1,3,4,6,7,2,3).stream().map(a*a).filter(a-> a>10).mapToInt(a->a).average().getAsDouble();
+    Able to supply multiple filter in a same stream
+		Arrays.asList(1,3,4,6,7,2,3).stream().map(a*a).filter(a-> a>10)
+		  .filter(a-> a>=10).mapToInt(a->a).average().getAsDouble();
+4) Even - Arrays.asList(1,3,4,6,7,2,3).stream().filter(a-> a%2 ==0).collect(Collectors.toList());
+   odd - Arrays.asList(1,3,4,6,7,2,3).stream().filter(a-> a%2 !=0).collect(Collectors.toList());
+5) starts with 2 - Arrays.asList(1,3,4,6,7,2,3).stream().map(a-> String.valueof(a)).filter(a->a.startsWith("2")).map(Integer::valueOf).collect(Collectors.toList());
+6) Dupliactes - Arrays.asList(1,3,4,6,7,2,3).stream().filter(a-> Collections.frequency(a) >1).collect(Collectors.toList());
+	HashSet<Integer> unique = new HashSet<>();
+	List<Integer> duplicates = Arrays.asList(1,3,4,6,7,2,3).stream().filter(a-> !unique.add(a)).collect(Collectors.toList());
+7) Max and Min
+	int max = Arrays.asList(1,3,4,6,7,2,3).stream().max(Comparator.comparingInt(a->a)).get();
+		int max1 = Arrays.asList(1,3,4,6,7,2,3).max(Comparator.comparing(Integer::valueOf)).get();
+		
+		int min = Arrays.asList(1,3,4,6,7,2,3).stream().min(Comparator.comparingInt(a->a)).get();
+		int min1 = Arrays.asList(1,3,4,6,7,2,3).min(Comparator.comparing(Integer::valueOf)).get();
+8) Sort asc and desc
+	List<Integer> asc = Arrays.asList(1,3,4,6,7,2,3).stream().sorted().collect(Collectors.toList());
+	List<Integer> desc = Arrays.asList(1,3,4,6,7,2,3).sorted(Collections.reverseOrder()).distinct().collect(Collectors.toList());
+9) skip and limit first 5 numbers
+		Integer skipSum =  Arrays.asList(1,3,4,6,7,2,3).stream().skip(5).reduce((a,b)->a+b).get();
+		Integer limitSum = Arrays.asList(1,3,4,6,7,2,3).limit(5).reduce((a,b)->a+b).get();
+10) Second largest and second smallest
+
+		Integer secondLargets = Arrays.asList(1,3,4,6,7,2,3).stream().sorted(Collections.reverseOrder()).limit(2).skip(1).findFirst().get();
+		Integer secondLargets1 = Arrays.asList(1,3,4,6,7,2,3).stream().sorted(Collections.reverseOrder()).skip(1).findFirst().get();
+
+		Integer secSmallest = Arrays.asList(1,3,4,6,7,2,3).stream().sorted().limit(2).skip(1).findFirst().get();
+		Integer secSmallest1 = Arrays.asList(1,3,4,6,7,2,3).stream().sorted().skip(1).findFirst().get();

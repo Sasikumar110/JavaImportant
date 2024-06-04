@@ -1,0 +1,63 @@
+mongo db
+authentication and authorization
+@scope variable
+autowiring and create object 
+string intern
+
+public int addMethod(int a, intb){
+ int c= a+b;
+ }
+ 
+ public int addMethod(int a, String str){
+ 
+}
+
+public class College{
+public int subMethod(int a, int b){
+
+}
+
+public int subMethod1(int a, String b){
+}
+
+}
+
+class Student extends College{
+public int subMethod(int a, int b){
+}
+
+public int subMethod1(int a, int b){
+}
+
+College clg = new College();
+clg.subMethod(5,5);
+Student std = new Student();
+
+std.subMethod(5,5);
+std.subMethod1(5,"string");
+
+}
+
+String str = "test";
+
+str = str.concat(" test1");
+
+
+String str = "Parking has lot of cars";
+String arr[] = str.split(" ");
+String strLength = arr[arr.length-1];
+int length = strLength.length();
+
+ArrayList<Employee> list1 = new ArrayList<>();
+ArrayList<Employee> list2 = new ArrayList<>();
+
+
+for(int i=0; i<list1.length; i++){
+ Employee str1 = list1.get(i);
+ List<Employee> dupList = list2.stream().filter(a-> a.id ==str1.id).collect(Collectors.toList());
+ 
+ if(dupList.size<=0){
+	list2.add(str1); 
+ }
+}
+
