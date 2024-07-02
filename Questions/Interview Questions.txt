@@ -1,0 +1,115 @@
+Mahati Infotech:
+--------------->
+1)what is encapsulation?
+2)whats is interface?
+3)what is object?
+4)what is get and post
+5)we can use save in get
+6)how to use the static method 
+7)what is abstraction
+8)why we not using muitple inheritance in java
+9)Multithreading and Multiprocessing
+10)what is class attributes
+11)what is inner class
+12)dependency injection
+
+Jeavio india pvt limited
+------------------------>
+1)checked and Unchecked Exception
+2)functional interface
+3)how to use hibernate in sql
+4)have you worked on spring boot
+5)access modifers
+6)what is public,private,protected,default
+7)spring boot confiquration
+8)runtime exception and compile time polymorphism
+9)explain project
+10) how to run different environments in java
+11) how to connect database in spring boot
+12) difference between pom and applicaiton properties
+13)  find the max element in java
+14)Lazy loading
+15)Autorization and authenication
+16)How to use the rest api for the authenication
+
+
+Datasense Technologies Coimbatore
+--------------------------------->
+1)Angular router
+2)angular structure
+3) how to differetice two variable
+4) what are regression functional
+5)session timeout of the application
+6)how to route the component
+7)how to create an component
+8)how to create an application
+9)what is use of service
+10)how to pagination works
+11)what is regression function
+12)what is lazy loading and eager loading
+
+
+Mithrasoft Technologies
+-------------------------->
+1) what is enqueue
+2)what is hibernate
+3)String pool
+4)String memory
+5)difference between hashmap and HashSet
+6)angular lifecycle
+7)java 8 features
+8)Introduce yourself
+9)String literal
+10)what are the ways we can create String
+11)what is procedure
+12)what is the use of hibernate
+13)how to connect database in spring boot
+14)difference between springboot and spring framework
+15)what is spring boot
+16)what is materelized view
+17)difference between mysql and postgresql
+18)syntax of both postgresql and oracle
+19)how to connect database in springboot
+20)	what is collections 
+21)what is the new feature added in Angular 18
+22)what is the latest version fo angular
+23)when angualr 18 released
+24)what is collections
+25)what are the types of creating a String in java
+26)Composition in java
+27)aggregration in java
+28)What is treemap
+29)difference between composition and aggregration
+
+Capegimini Interview
+------------------->
+1)what is realtion mapping in springboot
+2)what is the @Onetoone
+3)coding hashmap example template,sort the numbers when start with 1
+4)difference between hashmap and list
+5)Explain the project
+
+Infosys Interview
+----------------->
+1)what is the default port 
+2)what is the encapsulation
+3)what is dependency management
+4)how to create a web in spring boot 
+5)what is springboot
+6)tell me about project
+7)why releving your current organization
+8)what is the process
+9)overriding,overriding the dependency
+10)how to exclude autoconfiguration part in springboot
+11)can we create non web application in spring boot (yes we excluding web starter dependency
+12)Tomcat override 
+13)Embeded server usinng in tomcat and how to override the tomcat server(By excluding)
+14)what is default constructor
+15)what are the type of constructors
+16)what is the purpose of default constructor
+17)how to copy the constructor
+
+
+
+
+

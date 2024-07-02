@@ -1,0 +1,19 @@
+Link:
+=======>
+https://stackoverflow.com/questions/42084188/kill-tomcat-service-running-on-any-port-windows
+
+
+Command to Show what are the port running in the backend:
+=========================================================>
+netstat -aon | find /i "listening"
+
+
+Command To find the particular port runnning in the backend:
+============================================================>
+netstat -aon |find /i "listening" |find "8080"
+
+Command to kill the port in the Session:
+========================================>
+taskkill /F /PID portnumber
+
+taskkill /PID <PID> /F

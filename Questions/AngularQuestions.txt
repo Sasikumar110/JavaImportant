@@ -1,0 +1,75 @@
+What is Angular? Why was it introduced?
+what is Observable in angular?
+what is rxjs?
+What is TypeScript?
+What is data binding? Which type of data binding does Angular deploy?
+What are Single Page Applications (SPA)?
+Differentiate between Angular and AngularJS
+What are decorators in Angular? 
+Mention some advantages of Angular.
+What are the new updates with Angular10? 
+What are Templates in Angular?
+What are Annotations in Angular?
+What are Directives in Angular?
+What is an AOT compilation? What are its advantages?
+What are Components in Angular?
+What are Pipes in Angular? 
+What is the PipeTransform interface?
+What are Pure Pipes? 
+What are Impure Pipes?
+What is an ngModule?
+What are filters in Angular? Name a few of them.
+What is view encapsulation in Angular?
+What are controllers?
+What do you understand by scope in Angular?
+Explain the lifecycle hooks in Angular
+What is String Interpolation in Angular?
+What are Template statements?
+Explain the @Component Decorator.
+What are Services in Angular? 
+What are Promises and Observables in Angular? 
+What is ngOnInit? How is it defined? 
+How to use ngFor in a tag? 
+What are Template and Reactive forms?
+What is Bootstrap? How is it embedded into Angular? 
+What is Eager and Lazy loading?
+What type of DOM does Angular implement? 
+Why were client-side frameworks like Angular introduced?
+How does an Angular application work?
+Explain components, modules and services in Angular.	
+How are Angular expressions different from JavaScript expressions?
+Angular by default, uses client-side rendering for its applications.
+How do you share data between components in Angular?
+Explain the concept of dependency injection.
+What are RxJs in Angular?
+What exactly is a parameterized pipe?
+What are class decorators?
+What are Method decorators?
+What are property decorators?
+What are router links?
+What exactly is the router state?
+What does Angular Material mean?
+What is transpiling in Angular?
+What are HTTP interceptors?
+What is a bootstrapping module?
+How do you deal with errors in observables?	
+How to include SASS into an Angular project?
+What is the full form of ng in Angular?
+Why were client-side frameworks like Angular introduced?
+How does an Angular application work?
+What are some of the advantages of Angular over other frameworks?
+What are the advantages of Angular over React?
+What is two way data binding in Angular?
+Explain MVVM architecture
+What is AOT compilation? What are the advantages of AOT?
+What are HTTP interceptors ?
+How is Dependency Hierarchy formed?
+What is the option to choose between inline and external templates?
+What are template expressions?
+What are template statements?
+What are custom elements?
+What are the mapping rules between the Angular component and the custom element?
+What is REST?
+Explain how to use HttpClient with an example?
+What is view encapsulation in Angular?
+Explain the lifecycle hooks in Angular.

@@ -1,0 +1,7 @@
+
+                                                       ANGULAR COMMENDS
+                                                    <--------------------->
+
+1)Angualar Execution of Some Proerty rights for the user :
+--------------------------------------------------------->
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser

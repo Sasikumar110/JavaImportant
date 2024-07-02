@@ -1,0 +1,114 @@
+Sorting Algorithms
+--------------------->
+Selection Sort
+Bubble Sort
+Insertion Sort
+Merge Sort
+Quick Sort
+Heap Sort
+Counting Sort
+Radix Sort
+Bucket Sort
+Bingo Sort Algorithm
+ShellSort
+TimSort
+Comb Sort
+Pigeonhole Sort
+Cycle Sort
+Cocktail Sort
+Strand Sort
+Bitonic Sort
+Pancake sorting
+BogoSort or Permutation Sort
+Gnome Sort
+Sleep Sort – The King of Laziness
+Structure Sorting in C++
+Stooge Sort
+Tag Sort (To get both sorted and original)
+Tree Sort
+Odd-Even Sort / Brick Sort
+3-way Merge Sort
+-------------------------------------------------------------------------->
+Searching Algorithms:
+-------------------->
+Linear Search
+Sentinel Linear Search
+Binary Search
+Meta Binary Search | One-Sided Binary Search
+Ternary Search
+Jump Search
+Interpolation Search
+Exponential Search
+Fibonacci Search
+The Ubiquitous Binary Search
+-------------------------------------------------------------------------->
+Backtracking Algorithm:
+---------------------->
+The Knight’s tour problem
+Rat in a Maze
+N Queen Problem | Backtracking-3
+Subset Sum problem
+m Coloring Problem
+Hamiltonian Cycle
+Sudoku | Backtracking-7
+Magnet Puzzle
+Remove Invalid Parentheses
+A backtracking approach to generate n bit Gray Codes
+Write a program to print all permutations of a given string
+-------------------------------------------------------------------------->
+Greedy Algorithms:
+----------------->
+Activity Selection Problem
+Job Sequencing Problem
+Huffman Coding
+Huffman Decoding
+Water Connection Problem
+Minimum Swaps for Bracket Balancing
+Egyptian Fraction
+Policemen catch thieves
+Fitting Shelves Problem
+Assign Mice to Holes
+Dijkstra’s algorithm
+Kruskal’s algorithm
+Fractional Knapsack
+--------------------------------------------------------------------------->
+Recursion Algorithms:
+-------------------->
+Tree and Graph Traversal
+Dynamic Programming
+Divide-and-Conquer
+Backtracking
+Combinatorics
+--------------------------------------------------------------------------->
+Backtracking Algorithm:
+---------------------->
+Solving puzzles (e.g., Sudoku, crossword puzzles)
+Finding the shortest path through a maze
+Scheduling problems
+Resource allocation problems
+Network optimization problems
+The Knight’s tour problem
+Rat in a Maze
+N Queen Problem | Backtracking-3
+Subset Sum problem
+m Coloring Problem
+Hamiltonian Cycle
+Sudoku | Backtracking-7
+Magnet Puzzle
+Remove Invalid Parentheses
+A backtracking approach to generate n bit Gray Codes
+Write a program to print all permutations of a given string
+<--------------------------------------------------------------------------->
+
+Divide and Conquer Algorithm:
+---------------------------->
+Binary Search
+Merge Sort
+Quick Sort
+Calculate pow(x, n)
+Karatsuba algorithm for fast multiplication
+Strassen’s Matrix Multiplication
+Convex Hull (Simple Divide and Conquer Algorithm)
+Quickhull Algorithm for Convex Hull
+
+

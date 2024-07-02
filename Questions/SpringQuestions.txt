@@ -1,0 +1,92 @@
+What are the key dependencies of Spring Boot?
+What are the advantages of Spring Boot?
+What are the features of Spring Boot?
+How do you create a Spring Boot project using Spring Initializer?
+How do you create a simple Spring Boot application?
+How do you create a Spring Boot project using boot CLI?
+What are the Spring Boot Annotations?	
+What is @RequestMapping annotation in Spring Boot?
+What annotations are used to create an Interceptor?
+What is a Swagger in Spring Boot?
+What is Spring Boot, and how does it differ from Spring Framework?
+Explain the benefits of using Spring Boot for application development.
+Explain the concept of Spring Boot starters and provide an example.
+What is the purpose of the @SpringBootApplication annotation?
+What is the default port number for a Spring Boot application?
+How can you enable the auto-configuration feature in Spring Boot?
+Explain the concept of starters in Spring Boot.
+How does Spring Boot handle external configuration?
+What is the purpose of the application.properties (or application.yml) file?
+Describe the Spring Boot auto-configuration mechanism.
+What is the purpose of the @Component annotation in Spring Boot?
+Explain the difference between @Component, @Repository, @Service, and @Controller annotations in Spring Boot.
+What is the role of the @Autowired annotation in Spring Boot?
+How can you implement logging in a Spring Boot application?
+What is the purpose of the SpringApplication.run() method?
+What is Spring Boot CLI?
+How does Spring Boot handle data validation?
+What is the purpose of the @RequestMapping annotation in Spring Boot?
+How does Spring Boot integrate with containerization platforms like Docker and Kubernetes?
+Explain the concept of message-driven microservices using Spring Boot and Apache Pulsar.
+What is the purpose of the @Value annotation in Spring Boot?
+Describe the role of the CommandLineRunner and ApplicationRunner interfaces in Spring Boot.
+How can you implement pagination in a Spring Boot application?
+Explain the concept of bean scopes in Spring Boot.
+What is the purpose of the @Qualifier annotation in Spring Boot?
+How does Spring Boot handle exception logging and error handling?
+Describe the purpose and usage of the @RestControllerAdvice annotation.
+What is the purpose of the @ConfigurationProperties annotation in Spring Boot?
+Describe the purpose and usage of the @DynamicPropertySource annotation in Spring Boot testing.
+What is the purpose of the @TransactionalEventListener annotation in Spring Boot?
+What is the purpose of the @Scheduled annotation in Spring Boot?
+Describe the role of the @Profile annotation in Spring Boot.
+What is the purpose of Spring Boot's dynamic reloading and how does it work?
+Explain the concept of externalized logging in Spring Boot using Logback or Log4j2.
+What is the purpose of the @ModelAttribute annotation in Spring Boot?
+Explain the concept of reactive messaging with Spring Boot and Apache Kafka Streams.
+Describe the purpose and usage of the @Transactional(propagation = Propagation.NESTED) annotation.
+What is the purpose of the @DataJpaTest annotation in Spring Boot testing?
+Differentiate between Spring MVC and Spring Boot.
+What is the role of the @RestController annotation in Spring Boot?
+How can you implement exception handling in a Spring Boot application?
+Explain the concept of dependency injection in Spring Boot.
+How does Spring Boot support database operations?
+Describe the role of the Spring Boot Actuator.
+How can you implement caching in a Spring Boot application?
+How can you enable cross-origin resource sharing (CORS) in a Spring Boot application?
+Explain the concept of profiles in Spring Boot.
+Explain the concept of the Spring Boot Actuator and its major features.
+How can you integrate Spring Security in a Spring Boot application?
+Describe the role of the @Transactional annotation in Spring Boot.
+What is the purpose of the @RestControllerAdvice annotation?
+Explain the concept of Spring Data REST and its advantages.
+How can you implement file upload and download functionality in a Spring Boot application?
+Describe the purpose and usage of the @Async annotation in Spring Boot.
+What is the role of the embedded servlet container in Spring Boot?
+How can you implement request and response logging in a Spring Boot application?
+Explain the concept of reactive data access in Spring Boot using Spring Data R2DBC
+Describe the purpose and usage of the @Conditional annotation in Spring Boot.
+What is the purpose of the @SpringBootTest annotation in Spring Boot testing?
+Explain the concept of Spring Boot's actuator health checks and customizing health indicators.
+How can you secure REST APIs in a Spring Boot application using JSON Web Tokens (JWT)?
+Describe the purpose and usage of the @EntityScan annotation in Spring Boot.
+How can you customize the default error pages in a Spring Boot application?
+How can you create a Spring Boot application using Maven?
+How can you implement security in a Spring Boot application?
+What are the different deployment options for a Spring Boot application?
+Describe the process of creating a RESTful API using Spring Boot.
+Explain the concept of Spring Boot Data JPA and provide an example
+How can you handle large file uploads in a Spring Boot application?
+What is the purpose of Spring Boot Actuator endpoints?
+Explain the concept of Spring Boot Actuator metrics and monitoring.
+How can you implement microservices architecture using Spring Boot?
+Describe the role of the Spring Cloud Netflix stack in a Spring Boot application.	
+What is the purpose of Spring Boot DevTools and how does it enhance development productivity?
+How can you implement distributed session management in a Spring Boot application using Spring Session?
+How can you implement method-level security in a Spring Boot application?
+How can you integrate Spring Boot with OAuth 2.0 for secure authentication and authorization?
+How can you implement data caching in a Spring Boot application using the Spring Cache Abstraction?
+How can you implement asynchronous processing in a Spring Boot application?
+How can you enable HTTPS in a Spring Boot application?
+
+
