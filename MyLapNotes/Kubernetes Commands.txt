@@ -1,0 +1,4 @@
+Kubernetes Commands:
+====================>
+kubectl get pods -n 
+kubectl logs podname -f branch

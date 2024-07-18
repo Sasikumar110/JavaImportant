@@ -1,0 +1,69 @@
+Microservice Revision:
+======================
+
+monolithic Arcitecture --> monolithic is contains of single datasbase and single component and single structure 
+Microservice Arcitecture --> Microservice using multiple components and  Multiple databases and login for each
+
+Connecting to Microservice:
+==========================>
+EurekaClietn potal , zuul apigateway
+
+LoadBlancer --> using for multitple application service that hadling api gateway
+
+Microservice1 :
+===============> 
+@EnableEurekaServer
+Depedency -> spring-cloud-starter-netflix-eureka-server
+
+properties:
+----------->
+eureka.client.registerWithEureka:false
+eureka.client.fetchRegistry: false 
+
+Microservice2 :
+===============>
+@EnableEurekaClient
+Dependecy -> spring-cloud-starter-netflix-eureka-client
+
+properties:
+----------->
+eureka.client.serviceUrl:defaultZone:http://localhost:8761/eureka
+spring.application.name: Name(it will register in the  eureka)
+
+Config Server:(service Discovery)
+==============>
+@EnableConfigServer
+Dependecy:
+spring-cloud-config-server 
+(Config server)
+
+Propertysources:
+--------------->
+using properties sources we can add this config file in git from git we can access the config and used for the application
+
+Circuit Breaker:
+================>
+Using for Whenever the application api not getting properly the data we passing the error throw microservice as resttemplate
+
+
+
+Spring Cloud Zuul:
+==================>
+@EnableZuulProxy
+@EnableDiscoveryClient
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

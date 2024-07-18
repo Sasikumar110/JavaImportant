@@ -1,0 +1,4 @@
+Jenkins Build
+=============>
+
+git connection --> Maven Depedenccy --> Java Version  --> Build stage script --> docker Image -> push -> deployed

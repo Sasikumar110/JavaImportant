@@ -1,0 +1,85 @@
+Angular Revision:
+
+
+Angualar Annotations and also Decorators (Its extend the directive class):
+========================================>
+@NgModule
+@Component
+@Injectable
+@Input
+@Output
+@Pipe
+@ViewChild and @ViewChildren
+@HostBuilding
+@HostListener
+
+
+Angular Commands:
+================>
+npm install -g @angular/cli
+ng new my-app
+ng g c name
+ng g interface name
+ng g s
+ng g class name(Or) ng g cl name
+ng --version(angular version)
+npm uninstall -g @angular/cli cache clean
+npm install -g @angular/cli@latest
+ng g pipe
+ng g directive
+ng g module
+ng serve (or) ng s 
+ng s -o (open browser automatically)
+ng build (dist folder)
+
+Angular Decorater:
+=================>
+
+1)@Component({
+    selector: 'app-greeting',
+    standalone: true,
+    imports: [],
+    template: '<h1>{{greeting}} from GeeksForGeeks!</h1>',
+    styleUrl: './greeting.component.css',
+})
+
+2) (it is used in the service
+
+ @Injectable({
+    providedIn: 'root'
+})
+
+
+3)
+@NgModule({
+    declarations: [ /* Components, directives, and pipes */],
+    imports: [ /* Other modules */],
+    exports: [ /* Exports of this module */],
+    providers: [ /* Services */],
+    bootstrap: [ /* Root component */]
+})
+
+
+
+Observables in Angular
+======================>
+
+getMethod:any
+
+
+Lifecycle Hooks:
+===============>
+ngOnChanges() --> it imlements OnInit and any change event occurs it display the event
+ngOnDestory() --> when changes reverse it will occurs it will used for memory leaks
+ngOnInit()  --> it will used for process the  data
+ngDoCheck() -> every time the run that the cycle the method is correct
+ngAfterContentCheck()--> after the process checked the method is over
+ngAfterViewInit() --> it used in the  canvas element
+ngAfterContentInit -->
+
+
+
+
+
+
+

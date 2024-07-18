@@ -8,6 +8,7 @@ What are the Spring Boot Annotations?
 What is @RequestMapping annotation in Spring Boot?
 What annotations are used to create an Interceptor?
 What is a Swagger in Spring Boot?
+differncen between requestparam and pathvaraiable?
 What is Spring Boot, and how does it differ from Spring Framework?
 Explain the benefits of using Spring Boot for application development.
 Explain the concept of Spring Boot starters and provide an example.

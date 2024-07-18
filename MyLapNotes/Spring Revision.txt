@@ -1,0 +1,162 @@
+onetoone
+========>
+public class User{
+
+@OneToOne(cascade =CascadeType.ALL)
+@JoinColumn(name="address_id",refrencedColumnName="id")
+public Address address;
+}
+
+public class address{
+
+@OneToOne(mappedBy="address")
+public User user;
+
+onetoMany
+===========>
+public class Post{
+
+@OnetoMany(cascade =CascadeType.ALL,fetch=FetchType.EAGER)
+@JoinColumn(name="post_id",refrencedColumnName="id")
+ public List<Comments>  ji;
+ }
+ 
+ public clas Comments 
+ {
+ 
+ @Column(name="post_id)
+ public Long postId;
+ 
+ }
+ 
+ @ManyToMany
+ ============>
+ public class Employee
+ {
+ 
+ @ManyToMany(cascade = CascadeType.ALL ,fetch=FetchType.EAGER)
+ @JoinColumn(name = "employee_roles,joinColumns=@JoinColumn(name="employee_id"),inverseJoinColumns=@JoinColumn(name="role_id,refrencedColumnName="id))
+ public Set<Roles> = new HashSet<>();
+ 
+ }
+ 
+ public class Roles{
+ 
+ @ManyToMany(mappedBy="roles")
+ public List<Employees> employees;
+ 
+ }
+ 
+ 
+ JpaInternalWorking:
+ ===================>
+ EntityManagerFactory emf = Persistence.createEntityManagerFactory("className");
+ EntityManager em = emf.createEntityManage();
+ em.getTransaction.begin();
+ Student s = new Student();
+ s.setId(1);
+ s.setName("sasi");
+ s.setAge(23);
+ em.persist(s1);
+ em.getTransaction().commit();
+ emf.close();
+ em.close();
+ 
+ HibernateInternalWorking
+ ========================>
+ SessionFactory ssf = HibernateUtil.getSessionFactory();
+ Session ss = ssf.openSession();
+ Transaction tx = ss.beginTransaction();
+ Employee em = HibernateSaveExample.getTestEmployee();
+ ss.persist(em);
+ tx.commit();
+ ssf.close();
+ 
+ Annotation in springFramework
+ ============================>
+ @SpringBootAnnotation
+ @Configuration
+ @EnableAutoConfigration
+ @ComponentScan(basePackages="com.kgisl")
+ @Controller
+ @Bean
+ @Component
+ @Controller
+ @Repository
+ @Service
+ @RequestMapping(value="/get",method=RequestMethod.GET)
+ @RestController
+ @Qualifier("")
+ @Query("") -> when one class interfaced to multiple classes it will denoting that the 
+ @Version -->it has used in the entity and denoted the variable versio of the appllication
+ 
+ @PostMapping(value="/post)
+ public class Emthod(@RequestParam(name="atuhor") String name)
+ 
+ @GetMapping(name="/get/{id})
+ public class emthod(@PathVaraible(name= "authorname") String name ,@RequestBody Author author)
+ 
+ @PutMapping
+ @PatchMapping
+ @Autowired
+ @Value("${app.name}")
+ 
+ JpaAnnotaions
+ =============>
+ @Entity
+ @Table(name="table")
+ @Column(name="column")
+ @Id
+ @GeneratedValue(strategy=GenerationType.IDENTITY)
+ 
+ 
+ Annotations used for validation 
+ ==============================>
+ 
+ @NotNull
+ @NotBlank(message="Name is REquired")
+ private String name;
+ 
+ 
+ @Size(min=2,max=50,message="name is required size")
+ private String name;
+ 
+ @Email(message="invalid mail")
+ private String email;
+ 
+ 
+ ResposeEntity annotations in springboot:
+ ========================================>
+ 
+ @ResponseStatus(value=HttpStatus.NOT_FOUND)
+ 
+ 
+ 
+ RestTemplate :
+ =============>
+ String s = "http://wwe.id.com"
+ RestTemplate rs = new ResTemplate();
+ //get
+ return rs.getForEntity(s,String.class);
+ return rs.getForObject(s,String.class);
+ //post
+ return rs.postForObject(s,objectBody,String.class);
+ /put
+ retur rs.put(s,string.class)
+ /delete
+ return rs.delete(s,String.class)
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

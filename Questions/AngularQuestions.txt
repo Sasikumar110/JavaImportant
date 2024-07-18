@@ -1,3 +1,4 @@
+Explain the lifecycle hooks in Angular.
 What is Angular? Why was it introduced?
 what is Observable in angular?
 what is rxjs?
@@ -72,4 +73,3 @@ What are the mapping rules between the Angular component and the custom element?
 What is REST?
 Explain how to use HttpClient with an example?
 What is view encapsulation in Angular?
-Explain the lifecycle hooks in Angular.

@@ -1,0 +1,88 @@
+Max
+--->
+int max=op.stream().mapToInt(Integer::valueOf).max().getAsInt();
+int max=op.stream().mapToInt(Integer::valueOf).summaryStatistics().getMax();
+int max=op.stream().collect(Collectors.maxBy(Integer::compareTo)).get();
+Long max = kl.stream().map(EntitytClass::getSalary).collect(Collectors.maxBy(Long::compareTo)).get();
+
+Min 
+-->
+int min=op.stream().mapToInt(Integer::valueOf).min().getAsInt();
+
+Sum
+--->
+int max=op.stream().mapToInt(Integer::valueOf).sum();
+
+
+Average
+------->
+double io = op.stream().mapToInt(Integer::valueOf).average().getAsDouble();
+Double io = op.stream().collect(Collectors.averagingDouble(x->x.doubleValue()));
+
+Two values
+---------->
+ Map<String, Long> io = kl.stream().collect(Collectors.toMap(EntitytClass::getFirstname, EntitytClass::getPhone));
+ 
+ 
+ 
+ 
+ Three Values
+ ------------>
+ Map<String, DoubleSummaryStatistics> io = kl.stream().collect(Collectors.groupingBy(EntitytClass::getFirstname,Collectors.summarizingDouble(EntitytClass::getSalary)));
+ io.forEach((x,y)->{
+        System.out.println(x+"  "+y.getMax()+"   "+y.getCount());
+	  });
+	  
+	  
+Sorted and reverse order for both String and Integer
+---------------------------------------------------->
+List<Integer> io =op.stream().sorted(Collections.reverseOrder()).filter(x->Collections.frequency(op,x)>1).collect(Collectors.toList());
+	  
+	  
+	  
+Map vs FlatMap
+==============>
+
+map  -->   List<Integer> io = op.stream().map(Integer::valueOf).collect(Collectors.toList());
+
+* used for multiple arrays and values in a single process
+
+	  List<Integer> op = Arrays.asList(arr);
+	  List<Integer> ml = Arrays.asList(arr1);
+	  List<List<Integer>> rt = Arrays.asList(op,ml);
+flatmap ---> List<Integer> ui=rt.stream().flatMap(x->x.stream()).sorted().collect(Collectors.toList());
+
+
+
+Count thr value in Integer and count the values
+------------------------------------------------
+Map<Object, Long> er = ty.stream().filter(x->Collections.frequency(ty, x)>1).collect(Collectors.groupingBy(Integer::valueOf,Collectors.counting()));
+Map<Object, Long> ut = rt.stream().collect(Collectors.groupingBy(Integer::valueOf,Collectors.counting()));
+
+Counting Character :
+====================>
+Map<Character,Long> rt = ty.stream().collect(Collectors.groupingBy(Character::valueOf,Collectors.counting()));
+
+
+
+Sum of subarray combinations
+============================>
+IntStream.range(i,j+1).mapToObj(k->arr[k]).collect(Collectors.toList);
+
+
+String Startwith
+=================>
+
+li.stream().map(String::valueOf).filter(x->x.startWith("1").collect(Collectors.toList());
+
+
+Sorting by the particular value variable in entity:
+===================================================>
+List<EntitytClass> io =  kl.stream().sorted(Comparator.comparing(EntitytClass::getSalary).reversed()).collect(Collectors.toList());
+		io.forEach(x->{
+			System.out.println(x.getFirstname()+"   "+x.getLastname()+"  "+x.getSalary());
+	});
+
+
+
+ 

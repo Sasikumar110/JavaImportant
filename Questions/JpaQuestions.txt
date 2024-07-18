@@ -11,7 +11,6 @@ Describe in detail about the Persistence Unit in JPA?
 What are the various query methods in JPA to retrieve data from the database? List some of the most used methods.
 What is a Named Query in JPA? How is it used? And what are the benefits of using this?
 Difference between JPA Repository and CRUD Repository? Explain with the help of an example.
-Difference between JPA Repository and CRUD Repository? Explain with the help of an example.
 What is a database transaction and how is it used in JPA?
 What is JPQL and how is it used in JPA?
 What are entities in JPA? Explain the concept in detail.

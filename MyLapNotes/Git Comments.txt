@@ -1,0 +1,18 @@
+Git Comments
+=============>
+1)git config --global  user.name "sasikumra";
+2)git config --global user.email "kumargane@gmail.com"
+3)git init
+4)git clone http-url
+5)git status
+6)git add filename
+7)git commit -m "message"
+8)git branch -a
+9)git push branch
+10)git checkout branch
+11)git checkout -b new-branch
+12)git fetch
+13)git stash 
+14)git push
+15)git pull
+16)git merge
