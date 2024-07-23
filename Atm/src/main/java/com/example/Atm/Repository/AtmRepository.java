@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import com.example.Atm.Entity.AtmDetailsEntity;
 
 @Repository
-public interface AtmRepository extends JpaRepository<AtmDetailsEntity, Long> {
+public interface AtmRepository extends JpaRepository<AtmDetailsEntity, Integer> {
 
 	@Query(nativeQuery = true, value="SELECT * FROM atmmachine order by username asc")
 	Optional<AtmDetailsEntity> findUserName();
