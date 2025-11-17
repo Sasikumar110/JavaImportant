@@ -73,3 +73,4 @@ What are the mapping rules between the Angular component and the custom element?
 What is REST?
 Explain how to use HttpClient with an example?
 What is view encapsulation in Angular?
+what is signals

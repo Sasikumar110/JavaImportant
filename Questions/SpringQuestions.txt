@@ -1,12 +1,14 @@
-What are the key dependencies of Spring Boot?
+What are the key dependencies of Spring Boot? 
 What are the advantages of Spring Boot?
 What are the features of Spring Boot?
+what are the ways we can create an springboot application;
 How do you create a Spring Boot project using Spring Initializer?
 How do you create a simple Spring Boot application?
-How do you create a Spring Boot project using boot CLI?
+How do you create a Spring Boot project using boot CLI?(spring run command)
 What are the Spring Boot Annotations?	
+Difference Between soapapi and RestApi
 What is @RequestMapping annotation in Spring Boot?
-What annotations are used to create an Interceptor?
+What annotations are used to create an Interceptor?(Interactive before sending request and after sending request) @Component
 What is a Swagger in Spring Boot?
 differncen between requestparam and pathvaraiable?
 What is Spring Boot, and how does it differ from Spring Framework?

@@ -84,5 +84,8 @@ List<EntitytClass> io =  kl.stream().sorted(Comparator.comparing(EntitytClass::g
 	});
 
 
+Find the range from the arrays:
+===============================>
+IntStream.range(start, end).map(x->arr[x]).mapToObj(Integer::valueOf).forEach(x->System.out.println(x));
 
  

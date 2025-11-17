@@ -3,7 +3,7 @@ onetoone
 public class User{
 
 @OneToOne(cascade =CascadeType.ALL)
-@JoinColumn(name="address_id",refrencedColumnName="id")
+@JoinColumn(name="address_id",referencedColumnName="id")
 public Address address;
 }
 
@@ -62,6 +62,19 @@ public class Post{
  emf.close();
  em.close();
  
+ CriteriaBuidler
+ ===============>
+  CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Book> cq = cb.createQuery(Book.class);
+
+        Root<Book> book = cq.from(Book.class);
+        Predicate authorNamePredicate = cb.equal(book.get("author"), authorName);
+        Predicate titlePredicate = cb.like(book.get("title"), "%" + title + "%");
+        cq.where(authorNamePredicate, titlePredicate);
+
+        TypedQuery<Book> query = em.createQuery(cq);
+        return query.getResultList();
+ 
  HibernateInternalWorking
  ========================>
  SessionFactory ssf = HibernateUtil.getSessionFactory();
@@ -86,7 +99,7 @@ public class Post{
  @Service
  @RequestMapping(value="/get",method=RequestMethod.GET)
  @RestController
- @Qualifier("")
+ @Qualifier("")  --> If the Methods having the same 
  @Query("") -> when one class interfaced to multiple classes it will denoting that the 
  @Version -->it has used in the entity and denoted the variable versio of the appllication
  
@@ -109,6 +122,30 @@ public class Post{
  @Id
  @GeneratedValue(strategy=GenerationType.IDENTITY)
  
+ Lambok annotations:
+ ==================.
+ @Getter
+ @Setter
+ @Data -> it contains all
+ @NotNull
+ @ToString
+ @NoArgsConstructor
+ @RequiredArgsConstructor
+ @AllArgsConstructor
+ @Value
+ @Synchrnoized
+ @Locked
+ @With
+ @Log
+ 
+ Hadled Exception in stpingboot
+ ===============================>
+ @ExceptionHandler in springboot to handle exception
+ 
+ @ControllerAdvice  for using Globally Handling exception
+ 
+ 
+ 
  
  Annotations used for validation 
  ==============================>
@@ -130,6 +167,16 @@ public class Post{
  
  @ResponseStatus(value=HttpStatus.NOT_FOUND)
  
+ Response<Entity> method()
+ {
+   Entity entity=repo.findAll();
+   return ResposeEntity.status(HttpStatus.CREATED).body(entity); 201 code
+   return ReponseEntity.status(HttpStatus.NOT_FOUND).build(); 404 code 
+   return ReponseEntity.status(HttpStatus.ok).body(entity); 200 code 
+   return ReponseEntity.status(HttpStatus.No_CONTENT).build(); 204 code 
+   
+ }
+ 
  
  
  RestTemplate :
@@ -145,6 +192,28 @@ public class Post{
  retur rs.put(s,string.class)
  /delete
  return rs.delete(s,String.class)
+ 
+ 
+Network Code:
+=============>
+200 - ok
+201 - created
+202 - The request has been accepted for processing, but the processing has not been completed. The request might or might not be eventually acted upon, and may be disallowed when processing occurs
+300 - 
+400 - bad request
+401 -  unauthorized
+402 - 
+403 -forbideen
+404 - not found
+405 - method not allowed
+500 - internal server error
+501 - Not implemented
+502 - Bad Gateway
+
+
+ 
+ 
+ 
  
  
  

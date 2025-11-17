@@ -1,0 +1,17 @@
+Angular Folder Structure
+========================>
+.angular ==>
+.vscode ==>
+node_modules ==> it containes all the dependecy folders and files
+public ==>
+asset ==> it will contains images,json
+src -> app -> app.config.ts/app.routes.ts/app.components.ts/app.component.html/app.component.css
+src -> index.html/style.css/main.ts
+.editconfig ==>
+.gitignore ==>This file is related to the source control git.
+angular.json ==> It is very important configuration file related to your angular application. It defines the structure of your app and includes any settings associated with your application. Here, you can specify environments on this file (development, production). This is the file where we add Bootstrap file to work with Angular 7.
+package-lock.json ==>This is an auto-generated and modified file that gets updated whenever npm does an operation related to node_modules or package.json
+package.json ==> This is npm configuration file. It includes details about your website's package dependencies along with details about your own website being a package itself.
+tsconfig.app.json ==>This is used to override the tsconfig.json file with app specific configurations.
+tsconfig.json ==> This is a typescript compiler configuration file.
+tsconfig.spec.json ==>This overrides the tsconfig.json file with app specific unit test configurations.

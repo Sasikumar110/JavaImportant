@@ -1,11 +1,12 @@
 What is Java, and why is it popular?
-What are the main features of Java?
-what is classLoader?
+what is String pool;
+What are the main features of Java?(Object-Oriented Programming,)
+what is classLoader?(Jvm runtime load class file)(types Bootstrap,Extension ,application,system)
 Explain the difference between JDK, JRE, and JVM.
 What is the main difference between == and .equals() in Java?
 Explain the concept of object-oriented programming (OOP) in Java.
 What are the four principles of OOP, and why are they important?.
-Describe the main components of a Java program.
+Describe the main components of a Java program.(JVM,JRE,JDK)
 What is a class in Java, and how is it used?
 Explain the concept of inheritance in Java with an example.
 What is polymorphism, and how is it implemented in Java? Examp
@@ -13,7 +14,9 @@ Describe the types of polymorphism in Java.
 What is encapsulation, and why is it important in Java?
 Explain the difference between abstract classes and interfaces.
 What are constructors in Java, and how are they used?
-what is transient keyword;
+what is serilzation?(Object To ByteStream)
+what is Deserilization(ByteStream to Object)
+what is transient keyword;(Used in Serilization not store in database)
 Describe the types of constructors in Java.
 What is method overloading, and how is it implemented in Java?
 Explain the concept of method overriding in Java.
@@ -21,17 +24,18 @@ What are access modifiers, and how do they control access to class members?
 Describe the different types of access modifiers in Java.
 What is the ‘final’ keyword used for in Java?
 Explain the difference between ‘final’, ‘finally’, and ‘finalize’ in Java.(finalize is used when garbage collectors called before detroying object)
-What is static binding, and how does it differ from dynamic binding?
+What is static binding, and how does it differ from dynamic binding?(method overloading)
 Describe the main types of variables in Java.
 What is a static variable, and how is it different from an instance variable?
 Explain the purpose of the ‘this’ keyword in Java.
 What is a package in Java, and how is it used?
 Describe the main types of packages in Java.
 What is the purpose of importing packages in Java?
-Explain the difference between ‘ArrayList’ and ‘LinkedList’ in Java.
+Explain the difference between ‘ArrayList’  and ‘LinkedList’ in Java.
+What is the difference between ‘HashSet’ and ‘TreeSet’ in Java?
+what is the difference between treemap and hashMap; 
 What is the ‘HashMap’ class used for in Java?
 Describe the main features of the ‘HashMap’ class.
-What is the difference between ‘HashSet’ and ‘TreeSet’ in Java?
 What is the ‘Collections’ framework in Java, and why is it used?
 Explain the concept of generics in Java.
 What are the benefits of using generics in Java?
@@ -41,7 +45,7 @@ Explain the difference between checked and unchecked exceptions.
 Describe the main components of exception handling in Java.
 What is the purpose of the ‘try’, ‘catch’, and ‘finally’ blocks in Java?
 Explain the concept of multi-threading in Java.
-what is failfast and failsafe iterators in java? (filefast use concurenthashmapException and fail safe use not throw exception it throw clone values)
+what is failfast and failsafe iterators in java? (failfast use concurenthashmapException and fail safe use not throw exception it throw clone values)
 What is a thread, and how is it different from a process?
 Describe the main methods of creating threads in Java.
 What is synchronization, and why is it important in multi-threaded programming?

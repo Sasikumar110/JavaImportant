@@ -1,0 +1,44 @@
+Skills:
+------->
+Coding: Java,Angular,TypeScript,SpringBoot,Maven,Tomcat,HTML,CSS,SCSS,Bootstrap,grphql,restapi,Apache kafka,
+Others: 
+       Prometheus,Grafana,Microservices,DSA,Desing Pattern,
+	   LLD,HLD,KeyCloak,keeper,GCP,Azure,jenksins,github,gitlab,
+	   SQL,MYSQL,Postgresql,Safe Agile,waterfall,
+	   Data Driven Architecture,Monlithic,ArgoCd,ansibel,docker,terraform,
+	   
+Agile methodologies:
+-------------------->
+Epic,feature,user story,refinement,grooming,
+
+Project: Cartage,Rms,Fpi,
+
+Tools: intellij,visual studio code, eclipse,sts,insomania,postman,
+
+* we using differnent Microservices and data driven architure cosume data from kafka topics for each service contains differnent DB 
+* we following agile iteration methodologies to work on the project.
+* we using Ecp services in gitlab,and Ui and other services in Github
+* using angular for Ui,karma and jasmine for unit testing in anglar
+* for css we handling 7-1 css design pattern. 	
+* using graphql query for process the data in Ui.
+* using Github actions to deploy the application
+* using grfana,argocd,promethus for monitoring the application
+* for code quality we have using the Eslint, prettier ,css lint, and code coverage 80% in UI.
+
+We are using different microservices and a data-driven architecture, consuming data from Kafka topics. Each service has its own database.
+
+We follow Agile iteration methodologies to manage our project workflow.
+
+We use ECP services in GitLab, while the UI and other services are hosted in GitHub.
+
+For the frontend, we use Angular, with Karma and Jasmine for unit testing.
+
+For styling, we follow the 7-1 CSS design pattern.
+
+We use GraphQL queries to process and fetch data in the UI.
+
+We use GitHub Actions for deploying the application.
+
+For monitoring, we use Grafana, ArgoCD, and Prometheus.
+
+To ensure code quality, we use ESLint, Prettier, CSS Lint, and maintain 80% code coverage in the UI.

@@ -1,0 +1,171 @@
+Searching Algorithm:
+===================>
+Most common searching algorithms:
+---------------------------------->
+Linear Search: Iterative search from one end to the other.
+Binary Search: Divide-and-conquer search on a sorted array, halving the search space at each iteration.
+Ternary Search: Divide-and-conquer search on a sorted array, dividing the search space into three parts at each iteration.
+
+Other searching algorithms:
+--------------------------->
+Jump Search
+Interpolation Search 
+Exponential Search 
+
+
+Sorting Algorithm:
+====================>
+
+Bubble Sort: Iteratively compares adjacent elements and swaps them if they are out of order. The largest element “bubbles” to the end of the list with each pass.
+Selection Sort: Finds the minimum element in the unsorted portion of the list and swaps it with the first element. Repeats this process until the entire list is sorted.
+Insertion Sort: Builds the sorted list one element at a time by inserting each unsorted element into its correct position in the sorted portion.
+Quick Sort: A divide-and-conquer algorithm that selects a pivot element, partitions the list into two sublists based on the pivot, and recursively applies the same process to the sublists.
+Merge Sort: Another divide-and-conquer algorithm that recursively divides the list into smaller sublists, sorts them, and then merges them back together to obtain the sorted list.
+
+
+Divide and Conquer Algorithm:
+=============================>
+
+Divide and conquer algorithms follow a recursive strategy to solve problems by dividing them into smaller subproblems,
+solving those subproblems, and combining the solutions to obtain the final solution.
+
+Steps:
+
+Divide: Partition the problem into smaller, independent subproblems.
+Conquer: Recursively solve each subproblem.
+Combine: Merge the solutions of the subproblems to obtain the final solution.
+
+
+Greedy Algorithms:
+==================>
+
+Fractional Knapsack: Find the maximum total value of items that can be placed in the knapsack, allowing fractional inclusion of items.
+Dijkstra’s Algorithm: Finds the shortest path from a source vertex to all other vertices in a weighted graph.
+Kruskal’s Algorithm: Finds the minimum spanning tree of a weighted graph.
+Huffman Coding: Creates an optimal prefix code for a set of symbols, minimizing the total encoding length.
+
+
+Recursion:
+==========>
+Towers of Hanoi (TOH)
+Factorial Calculation 
+Fibonacci Sequence 
+Tree traversals
+Graph traversals
+Divide and Conquers Algorithms
+Backtracking algorithms.
+
+Steps:
+Base Case: Define a condition that stops the recursive calls and provides a solution.
+Recursive Case: Define the steps to break down the problem into smaller instances and make recursive calls.
+Return: Return the solution from the recursive calls and combine them to solve the original problem.
+
+Backtracking Algorithm:
+=======================>
+
+Knight’s tour problem: Finding a sequence of moves by a knight on a chessboard such that it visits every square exactly once.
+Rat in a Maze: Finding a path from the starting position to the exit in a maze, with obstacles represented as walls.
+N-Queen Problem: Placing N queens on an N×N chessboard such that no two queens attack each other.
+Subset Sum Problem: Determining whether there exists a subset of the given set with a given sum.
+Sudoku: Solving a 9×9 grid puzzle with numbers from 1 to 9 such that each row, column, and 3×3 subgrid contains all the digits without repetition.
+
+Dynamic Programming :
+=====================>
+Optimal Substructure: The optimal solution to a problem can be constructed from the optimal solutions to its subproblems.
+Overlapping Subproblems: Subproblems are often repeated in the larger problem, leading to redundant computations.
+Memoization / Tabulation: Storing the solutions to subproblems to avoid recomputation.
+
+Fibonacci Sequence: Generating Fibonacci numbers using dynamic programming to avoid redundant calculations.
+Longest Common Subsequence: Finding the longest subsequence common to two sequences.
+Longest Increasing Subsequence: Finding the longest subsequence of a given sequence in which the elements are sorted in increasing order.
+0/1 Knapsack Problem: Determining the maximum value that can be obtained by selecting items with given weights and values, while not exceeding a specified weight limit.
+Rod Cutting Problem: Maximizing the profit by cutting a rod of given length into pieces and selling them according to given prices.
+Coin Change Problem: Determining the number of ways to make change for a given amount using a given set of coin denominations.
+Edit Distance: Finding the minimum number of operations (insertion, deletion, substitution) required to convert one string into another.
+Subset Sum Problem: Determining whether there exists a subset of a given set with a given sum.
+Longest Palindromic Subsequence: Finding the longest subsequence of a given sequence that is a palindrome.
+Maximum Subarray Sum: Finding the contiguous subarray with the largest sum within a given one-dimensional array.
+Partition Equal Subset: Sum	Determining whether it is possible to partition a given set into two subsets with equal sum.
+Minimum Cost Path: Finding the minimum cost path from the top-left corner to the bottom-right corner of a given grid.
+Maximum Product Subarray: Finding the contiguous subarray with the largest product within a given one-dimensional array.
+
+Graph Algorithms:
+=================>
+
+Depth-First Search (DFS):
+Breadth-First Search (BFS)
+Kruskal’s Algorithm
+Prim’s Algorithm
+Kahn’s Algorithm
+DFS-based Algorithm
+Dijkstra’s Algorithm
+Floyd-Warshall Algorithm
+Bellman Ford Algorithm
+Johnson Algorithm
+Kosaraju’s Algorithm
+Tarjan’s Algorithm
+
+
+Pattern Searching:
+==================>
+Brute-Force: It compares the pattern with every substring of the text
+Boyer-Moore: It compares the pattern from right to left, skipping characters based on the last mismatch
+Knuth-Morris-Pratt: It uses a precomputed failure function to skip unnecessary comparisons
+Rabin-Karp: It uses hashing to quickly check for potential matches
+
+Branch and Bound Algorithm:
+===========================>
+
+0/1 Knapsack using Branch and Bound: Implementation details of the branch and bound approach for solving the 0/1 Knapsack problem.
+0/1 Knapsack using Least Cost Branch and Bound: Solving the 0/1 Knapsack problem using the least cost branch and bound technique.
+8 puzzle Problem using Branch and Bound: Application of branch and bound to solve the 8 puzzle problem, a popular sliding puzzle game.
+N Queen Problem using Branch and Bound: Utilizing branch and bound to find solutions to the N Queens problem, a classic chess problem.
+
+Randomized Algorithms:
+======================>
+Las Vegas: Always produces a correct result, but the running time is random.
+Monte Carlo: May produce an incorrect result with a small probability, but the running time is usually faster
+
+QuickSort: A randomized sorting algorithm with an average-case time complexity of O(n log n).
+Skip List: A randomized data structure that provides fast search and insertion operations.
+Bloom Filter: A probabilistic data structure for efficient set membership testing.
+
+Mathematical Algorithms:
+========================>
+
+GCD and LCM: Find the greatest common divisor and least common multiple of two numbers.
+Prime Factorization: Decompose a number into its prime factors.
+Fibonacci Numbers: Generate the Fibonacci sequence, where each number is the sum of the two preceding ones.
+Catalan Numbers: Count the number of valid expressions with a given number of pairs of parentheses.
+Modular Arithmetic: Perform arithmetic operations on numbers modulo a given value.
+Euler Totient Function: Count the number of positive integers less than a given number that are relatively prime to it.
+nCr Computations: Calculate the binomial coefficient, which represents the number of ways to choose r elements from a set of n elements.
+Prime Numbers and Primality Tests: Determine whether a given number is prime and find prime numbers efficiently.
+Sieve Algorithms: Find all prime numbers up to a given limit.
+
+Geometric Algorithms:
+======================>
+
+Geometric algorithms are a class of algorithms that solve problems related to geometry. Geometric algorithms are essential for solving a wide range of problems in computer science, such as:
+
+Convex Hull: Finds the smallest convex polygon that contains a set of points.
+Closest Pair of Points: Finds the two points in a set that are closest to each other.
+Line Intersection: Determines whether two lines intersect and, if so, finds the point of intersection.
+Point in Polygon: Determines whether a given point is inside or outside a polygon.
+
+Bitwise Algorithms:
+===================>
+Bitwise algorithms are algorithms that operate on individual bits of numbers. 
+These algorithms manipulate the binary representation of numbers to perform tasks such as bit manipulation,
+ bitwise logical operations (AND, OR, XOR), shifting bits, and setting or clearing specific bits within a number.
+ Bitwise algorithms are commonly used in low-level programming, cryptography, 
+ and optimization tasks where efficient manipulation of individual bits is required.
+
+Bit Shifting: Shifts bits to the left or right by a specified number of positions.
+Left shift (<<): Shifts bits to the left, effectively multiplying the number by 2.
+Right shift (>>): Shifts bits to the right, effectively dividing the number by 2.
+Extract bits: Using masks to extract specific bits from an integer.
+Setting bits: Using masks to set specific bits to 1 in an integer.
+Clearing bits: Using masks to set specific bits to 0 in an integer.
+Toggling bits: Using XOR (^) to toggle specific bits in an integer.
+Counting Set bits: Counting the number of set bits (1s) in an integer.

@@ -1,0 +1,37 @@
+SQl Questions:
+
+Procedures:
+============>
+
+create procedure: 
+
+CREATE PROCEDURE GetAllProducts()
+BEGIN
+	SELECT *  FROM products;
+END //
+
+with paramter
+--------------->
+DELIMITER &&
+create procedure getallproducts(in vari int)
+BEGIN
+	select id,username from ematrix.userlogin where id>vari;
+end &&
+
+
+indexes:
+========>
+indexes is used to execute the query faster when we have laksh of record
+
+clustered Index;
+--------------->
+the index that use primary key as clustered and retrieve the data faster
+
+NonClustered Index:
+===================>
+the index that will be used unique key for retrieve the data
+
+
+Trigger
+======>
+

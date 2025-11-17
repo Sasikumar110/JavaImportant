@@ -1,0 +1,189 @@
+0–9
+====>
+
+(1+ε) - approximate nearest neighbor search
+
+A
+====>
+A* search algorithm
+All nearest smaller values
+Alpha–beta pruning
+Amplitude amplification
+Anytime A*
+Anytime algorithm
+
+B
+=====>
+B*
+Backjumping
+Backtracking
+Bayesian search theory
+Beam search
+Beam stack search
+Best bin first
+Best node search
+Best-first search
+Bidirectional search
+Binary search
+BitFunnel
+Breadth-first search
+Brute-force search
+
+C
+=======>
+Combinatorial search
+Contraction hierarchies
+Cuckoo hashing
+
+D
+=======>
+D*
+Dancing Links
+Depth-first search
+Dichotomic search
+Difference-map algorithm
+Dijkstra's algorithm
+Disjoint-set data structure
+Double hashing
+Dynamic perfect hashing
+
+E
+=========>
+Expectiminimax
+Exponential search
+Extendible hashing
+F
+Fibonacci search technique
+Finger search
+Finger search tree
+Fractional cascading
+Fringe search
+
+G
+===========>
+Genetic algorithm
+Geometric hashing
+Gestalt pattern matching
+God's algorithm
+Golden-section search
+Graphplan
+Grover's algorithm
+
+H
+==========>
+Hash function
+Hierarchical navigable small world
+Hill climbing
+Hopscotch hashing
+
+
+I
+===========>
+Iterative deepening A*
+Incremental heuristic search
+Index mapping
+Interpolation search
+Inversion list
+Inverted index
+Iterative deepening depth-first search
+
+
+J
+============>
+Johnson's algorithm
+Jump point search
+Jump search
+
+K
+==============>
+K-independent hashing
+K-nearest neighbors algorithm
+Knuth's Algorithm X
+
+
+L
+=============>
+Late move reductions
+Lexicographic breadth-first search
+Lifelong Planning A*
+Linear hashing
+Linear probing
+Linear search
+Linear-quadratic regulator rapidly exploring random tree
+Locality-sensitive hashing
+Look-ahead (backtracking)
+
+M
+===============>
+MaMF
+Maximum inner-product search
+Minimax
+Mobilegeddon
+MTD(f)
+Multiplicative binary search
+
+
+N
+=============>
+Nearest neighbor search
+NewsRx
+Null-move heuristic
+
+
+P
+============>
+Parallel metaheuristic
+Perfect hash function
+Phrase search
+Proof-number search
+
+
+Q
+============>
+Quadratic probing
+Query expansion
+
+
+R
+==========>
+Rainbow table
+Range minimum query
+Rapidly exploring dense trees
+Rapidly exploring random tree
+Reverse-search algorithm
+Rocchio algorithm
+
+S
+===========>
+Search game
+Search tree
+Search-based software engineering
+Siamese method
+Similarity search
+SMA*
+Spiral hashing
+Spreading activation
+SSS*
+Stack search
+State space search
+Sudoku solving algorithms
+
+
+T
+===========>
+Tabu search
+Ternary search
+Ternary search tree
+Theta*
+Thought vector
+Trigram search
+
+U
+=========>
+Uniform binary search
+Universal hashing
+
+V
+==========>
+Variable neighborhood search
+Variation (game tree)

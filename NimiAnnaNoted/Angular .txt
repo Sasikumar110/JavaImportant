@@ -48,7 +48,7 @@ Angular
     @Component default have the @Injectable annotation
    to use [(ngModel)]  - need to import FormsModule in the app module
 30) Ways to transfer data from one componet to another
-	1) Parent to child
+	1) Parent to child via @Input()
 	2) child to parent via output() and eventemitter
 	3) child to parent via viewchild
 	4) via a service

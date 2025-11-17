@@ -1,0 +1,16 @@
+Kafka Practice:
+=============>
+
+kafka Producer
+Kafka Consumer
+Kafka Broker
+partition
+topic
+
+Kafka Producer:
+==============>
+Apache Kafka producer is the sender 
+
+464000
+
+

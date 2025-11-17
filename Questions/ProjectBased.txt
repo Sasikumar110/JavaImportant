@@ -1,0 +1,72 @@
+Project:
+===========>
+
+Fpi (forign inevestiong Protocol)
+=================================>
+client:
+------->
+*hsbc,CitiPfpi
+Server :
+
+* In the Application using Agile methodolody
+* It microservices architecture based Application
+* It contains of Four microservices based Application 
+	1) Gateway
+	2) Authserver
+	3) FPi
+	4) Vault
+* It running in Horizontal Scalling 
+* It is Low level design based application 
+* Each services running in Maven based spring boot hibernate frameworks loadbalancer
+  and using RestApi and sprng security 	Autherized to token for login
+* Packaging Jar file and deploy in Localserver using Apache Tomcat for running the server
+* Jenkin Ci/Cd for jenkins,using docker image for Deplyment in cloud
+* Gcp worked Cloudsql,IAm,virtual
+* OnPrmises
+* Hosting 
+* using postman for api testing
+
+* Client:
+  ------>
+  * using Angular for client Developement
+  * Deploying using dist folder (npm run:build prod)
+  *typescript
+  
+* Database:
+  ---------->
+  * postgresql
+  * Oracle
+  
+How Application Works:
+---------------------> 
+Fpi is about forign investores who need to create invest in capital market in india they need to create an application 
+in Securities and Exchange Board of India (SEBI).
+After the application get approval they can manage trading and can buy and sell in market
+    
+Category I FPIs include the lowest risk entities, such as foreign governments and government-related foreign investors. 
+Category II FPIs include appropriately regulated broad-based funds, 
+appropriately regulated entities, broad-based funds whose investment manager
+ is appropriately regulated, university funds, pension funds, etc.
+ Category III FPIs include others not eligible under the first two categories, 
+ such as individuals, corporates, family offices, among others.
+ 
+ 
+============================>
+Rms(risk management system)
+============================>
+Client:
+------->
+*hsbc,shareIdia,DutechBank,Axis,Jefris
+
+
+About: 
+------>
+We Have Dolphin Product in that rms is one of the module that the 
+Nse
+span(standard portfolio index) file that
+
+
+Server:
+------->
+* 3 microservices 
+* ApiGateway,Eureka server 
